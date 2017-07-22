@@ -24,3 +24,4 @@ $ xattr s.7z
 ## links
 * https://github.com/mathiasbynens/dotfiles
 * https://github.com/mathiasbynens/dotfiles/issues/687
+* https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
