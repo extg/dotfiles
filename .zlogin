@@ -1,1 +1,1 @@
-nvm alias default v7
+#nvm alias default v6
