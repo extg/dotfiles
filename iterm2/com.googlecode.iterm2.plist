@@ -546,7 +546,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1080 1402 606 456 -1080 -40 1080 1898 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>281 284 770 381 0 0 1280 778 </string>
+	<string>-915 942 796 473 -1080 138 1080 1898 </string>
 	<key>NSWindow Frame com.apple.typography_panel_NittiWM2-Light</key>
 	<string>-465 1388 260 42 -811 800 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -599,13 +599,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.17393775284290314</real>
+				<real>0.17310607433319092</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.846507728099823</real>
+				<real>0.84928548336029053</real>
 				<key>Red Component</key>
-				<real>0.76304608583450317</real>
+				<real>0.60205173492431641</real>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
@@ -677,13 +677,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.17254902422428131</real>
+				<real>0.1716935932636261</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.84705883264541626</real>
+				<real>0.84989559650421143</real>
 				<key>Red Component</key>
-				<real>0.76470589637756348</real>
+				<real>0.60017722845077515</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
