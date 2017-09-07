@@ -32,3 +32,24 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules' --dirsfirst "$@" | less -FRNX;
 }
+
+# https://unix.stackexchange.com/questions/97920/how-to-cd-automatically-after-git-clone
+# git()
+# {
+#    local tmp=$(mktemp)
+#    local repo_name
+
+#    if [ "$1" = clone ] ; then
+#      /usr/bin/git "$@" | tee $tmp
+#      repo_name=$(awk -F\' '/Cloning into/ {print $2}' $tmp)
+#      rm $tmp
+#      printf "changing to directory %s\n" "$repo_name"
+#      cd "$repo_name"
+#    else
+#      /usr/bin/git "$@"
+#    fi
+# }
+
+function gclone() {
+  git clone "$1" && cd "$(basename "$1")"
+}
