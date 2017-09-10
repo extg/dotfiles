@@ -17,6 +17,8 @@ alias ws="cd ~/Workspaces"
 alias g="git"
 alias gh="git hist"
 
+alias stree="open -a SourceTree"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
