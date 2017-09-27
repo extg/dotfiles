@@ -53,3 +53,8 @@ function tre() {
 function gclone() {
   git clone "$1" && cd "$(basename "$1")"
 }
+
+function grmtag() {
+	git tag -d "$1"
+	git push origin ":refs/tags/$1"
+}
