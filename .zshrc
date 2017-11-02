@@ -91,3 +91,13 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Подсветка синтаксиса в less
+# https://gist.github.com/textarcana/4611277
+# export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+# export LESS=" -R "
+export LESSOPEN="| src-hilite-lesspipe.sh %s"
+export LESS=" -R "
+
+# alias less='less -M -N -g -i -J --underline-special --SILENT'
+# alias more='less'
