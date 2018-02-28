@@ -51,7 +51,9 @@ function tre() {
 # }
 
 function gclone() {
-  git clone "$1" && cd "$(basename "$1")"
+  [[ -n $1 ]] && DIR="$(basename "$1")" || DIR="$2"
+
+  git clone "$@" && cd "$DIR"
 }
 
 function grmtag() {
