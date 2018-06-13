@@ -51,8 +51,11 @@ function tre() {
 # }
 
 function gclone() {
-  [[ -n $1 ]] && DIR="$(basename "$1")" || DIR="$2"
-
+  DIR="$(basename "$1")";
+  if [[ -n $2 ]]; then
+    DIR="$2";
+  fi;
+  
   git clone "$@" && cd "$DIR"
 }
 
