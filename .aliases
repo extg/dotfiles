@@ -51,3 +51,5 @@ alias sudo='sudo '
 
 # Get week number
 alias week='date +%V'
+
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"

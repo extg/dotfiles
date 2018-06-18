@@ -79,7 +79,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 # TODO: подумать надо ли это
 # plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
@@ -98,3 +97,5 @@ export LESS=" -R "
 
 # alias less='less -M -N -g -i -J --underline-special --SILENT'
 # alias more='less'
+
+test -e "$HOME/.exports" && source "$HOME/.exports"
