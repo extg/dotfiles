@@ -1,0 +1,8 @@
+[
+    { "keys": ["super+backspace"], "command": "delete_lines" },
+    { "keys": ["super+forward_slash"], "command": "run_macro_file", "args": {"file": "res://Packages/User/Comment Line.sublime-macro"}, "context": 
+        [
+            { "key": "selection_empty", "operator": "equal", "operand": "true", "match_all": true }
+        ]
+    }
+]
