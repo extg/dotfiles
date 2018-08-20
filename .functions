@@ -51,7 +51,7 @@ function tre() {
 # }
 
 function gclone() {
-  DIR="$(basename "$1")";
+  DIR="$(basename "$1" ".git")";
   if [[ -n $2 ]]; then
     DIR="$2";
   fi;
