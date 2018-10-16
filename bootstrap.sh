@@ -8,7 +8,8 @@ function doIt() {
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		-avh --no-perms . ~;
-	source ~/.zshrc;
+	source ~/.aliases;
+	source ~/.functions;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
