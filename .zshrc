@@ -99,3 +99,9 @@ export LESS=" -R "
 # alias more='less'
 
 test -e "$HOME/.exports" && source "$HOME/.exports"
+
+# Загружаем aliases,functions тут, потому что в aliases есть git_current_branch
+for file in ~/.{aliases,functions}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
