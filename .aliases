@@ -51,3 +51,6 @@ alias sudo='sudo '
 alias week='date +%V'
 
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+# Alias for dates like in GNU Command Line in Linux (using Homebrew coreutils)
+# alias date='gdate'
