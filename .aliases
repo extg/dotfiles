@@ -9,11 +9,15 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias tmuxa="tmux attach || tmux new"
 
+ function current_branch() {
+   git_current_branch
+ }
+
 # git
 alias g="git"
 alias gh="git hist"
 # TODO: Remove after https://github.com/robbyrussell/oh-my-zsh/pull/5112
-alias grho="git reset --hard origin/$(git_current_branch)"
+alias grho="git reset --hard origin/$(current_branch)"
 
 alias stree="open -a SourceTree"
 
