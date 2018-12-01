@@ -556,15 +556,15 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>-776 1614 400 129 -1152 192 1152 2026 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 1569 620 392 0 800 2560 1418 </string>
+	<string>330 289 620 392 0 0 1280 778 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>0 319 599 459 0 0 1280 778 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-945 1115 796 473 -1152 192 1152 2026 </string>
+	<string>-956 763 928 394 -1152 192 1152 2025 </string>
 	<key>NSWindow Frame com.apple.typography_panel_NittiWM2-Light</key>
 	<string>-465 1388 260 42 -811 800 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1152 770 0 0 1280 778 </string>
+	<string>0 0 1152 777 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>327 58 570 452 0 0 1280 778 </string>
 	<key>NeverWarnAboutOverrides</key>
@@ -797,13 +797,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.08235294371843338</real>
+				<real>0.10000000000000001</real>
 				<key>Color Space</key>
-				<string>Calibrated</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.08235294371843338</real>
+				<real>0.10000000000000001</real>
 				<key>Red Component</key>
-				<real>0.08235294371843338</real>
+				<real>0.10000000000000001</real>
 			</dict>
 			<key>Badge Color</key>
 			<dict>
@@ -819,13 +819,13 @@
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.13292643229166673</real>
+			<real>0.050000000000000003</real>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>6.0547175480769226</real>
+			<real>0.10000000000000001</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1254,7 +1254,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>10000</integer>
+			<integer>0</integer>
 			<key>Scrollback in Alternate Screen</key>
 			<false/>
 			<key>Selected Text Color</key>
@@ -2198,9 +2198,9 @@
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
 	<key>SUAutomaticallyUpdate</key>
-	<true/>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
-	<true/>
+	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
@@ -2208,7 +2208,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-09-27T07:43:34Z</date>
+	<date>2018-10-22T22:45:26Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -2244,7 +2244,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.2.0</string>
+	<string>3.2.3</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
