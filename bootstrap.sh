@@ -1,21 +1,28 @@
 #!/usr/bin/env bash
 
 function doIt() {
-	rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
-		--exclude ".idea/" \
-		--exclude "iterm2/" \
-		--exclude "bootstrap.sh" \
-		--exclude "README.md" \
-		-avh --no-perms . ~;
-	source ~/.aliases;
-	source ~/.functions;
+	if shellcheck --exclude=SC2139,SC1090 .functions .aliases bootstrap.sh; then
+		echo "Shellcheck: ok!"
+
+		rsync --exclude ".git/" \
+			--exclude ".DS_Store" \
+			--exclude ".idea/" \
+			--exclude "iterm2/" \
+			--exclude "bootstrap.sh" \
+			--exclude "README.md" \
+			-avh --no-perms . ~;
+
+		source "$HOME/.aliases";
+		source "$HOME/.functions";
+	else
+		echo "Shellcheck: failed!"
+	fi;
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
+if [ "$1" == "--force" ] || [ "$1" == "-f" ]; then
 	doIt;
 else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+	read -rp "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 	echo "";
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		doIt;
