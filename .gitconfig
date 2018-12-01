@@ -1,5 +1,9 @@
 [alias]
 
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	hist = log --pretty=format:\"%Cgreen%h %C(cyan)%ad%Creset %Cred|%Creset %s %Cred(%C(cyan)%an%Cred)\" --graph --date=short
+
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 

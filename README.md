@@ -1,4 +1,6 @@
-# Порядок загрузки
+# `dotfiles`
+
+Порядок загрузки:
 
 ```
 ~/.zshenv
@@ -8,13 +10,33 @@
 ~/.zlogout
 ```
 
-# xattr
-## Что значит `@` в выводе `ls -l`
-it means the file has extended attributes. [Full answer](http://unix.stackexchange.com/questions/1646/or-mark-after-running-ls-al)
 
-## How do I remove the “extended attributes” on a file in Mac OS X?
+## `ssh`
 
-you can also use the -c option to remove all extended attributes:
+## `ssh-keygen`
+
+Generate a new key:
+
+```sh
+ssh-keygen -t rsa -C "your_email@example.com"
+```
+
+Fingerprint:
+
+```sh
+ssh-keygen -lf ./id_rsa -E md5
+```
+
+
+## xattr
+
+* Что значит `@` в выводе `ls -l`
+  — it means the file has extended attributes.
+    [Full answer](http://unix.stackexchange.com/questions/1646/or-mark-after-running-ls-al)
+* How do I remove the “extended attributes”
+  on a file in Mac OS X?
+  — you can also use the -c option to remove
+    all extended attributes:
 
 ```
 $ xattr -c s.7z
