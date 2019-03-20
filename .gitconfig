@@ -2,12 +2,10 @@
 
 	unstage = reset HEAD --
 	last = log -1 HEAD
-	hist = log --pretty=format:\"%Cgreen%h %C(cyan)%ad%Creset %Cred|%Creset %s %Cred(%C(cyan)%an%Cred)\" --graph --date=short
+	hist = log --pretty=format:\"%Cgreen%h %C(cyan)%ad%Creset %Cred|%Creset %s %Cred(%C(cyan)%an%Cred)\" --graph --date=format:\"%y-%m-%d %H:%M\"
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
-
-	hist = log --pretty=format:\"%Cgreen%h %C(cyan)%ad%Creset %Cred|%Creset %s %Cred(%C(cyan)%an%Cred)\" --graph --date=short
 
 	# View the current working tree status using the short format
 	s = status -s
@@ -85,22 +83,23 @@
 
 [color "branch"]
 
-	# current = yellow reverse
-	# local = yellow
-	# remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 
 [color "diff"]
 
-	# meta = yellow bold
-	# frag = magenta bold # line info
-	# old = red # deletions
-	# new = green # additions
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # bold? deletions
+	new = green # bold? additions
 
 [color "status"]
 
-	# added = yellow
-	# changed = green
-	# untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
+    
 
 [diff]
 
@@ -128,3 +127,4 @@
 [user]
 	name = extg
 	email = extg@yandex-team.ru
+
