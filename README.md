@@ -55,3 +55,5 @@ $ xattr s.7z
 * https://github.com/junegunn/fzf#key-bindings-for-command-line
 * https://github.com/bbatsov/prelude
 * https://sohabr.net/habr/post/248663/
+* сделать разделение по системам (Ubuntu, macOS)
+* вынести shellcheck в lint-staged
