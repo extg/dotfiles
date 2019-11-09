@@ -9,9 +9,13 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias tmuxa="tmux attach || tmux new"
 
- function _grho() {
-   git reset --hard "origin/$(git_current_branch)"
- }
+alias y="yarn"
+
+function _grho() {
+  git reset --hard "origin/$(git_current_branch)"
+}
+
+alias c="code-insiders"
 
 # git
 alias g="git"
