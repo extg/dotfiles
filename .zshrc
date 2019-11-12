@@ -85,8 +85,9 @@ export LANG=en_US.UTF-8
 # TODO: и надо ли это
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Подсветка синтаксиса в less
 # https://gist.github.com/textarcana/4611277
@@ -100,8 +101,8 @@ export LESS=" -R "
 
 test -e "$HOME/.exports" && source "$HOME/.exports"
 
-source ~/.aliases;
-source ~/.functions;
+source "$HOME/.aliases";
+source "$HOME/.functions";
 
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit

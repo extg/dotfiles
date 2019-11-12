@@ -47,6 +47,7 @@ $ xattr s.7z
 * https://github.com/mathiasbynens/dotfiles
 * https://github.com/mathiasbynens/dotfiles/issues/687
 * https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
+* https://github.com/Tyriar/dotfiles
 
 ## TODO
 
@@ -77,47 +78,56 @@ https://github.com/tonsky/FiraCode/wiki/Installing#macos
 Настройка vs code http://shanalikhan.github.io/2015/12/15/Visual-Studio-Code-Sync-Settings.html
 
 
-
-Нужно попробовать все ставить через `brew cask`, например, vs code можно было поставить так
+[spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
 
 ```
-$ brew update                           # Fetch latest version of homebrew and formula.
-$ brew tap caskroom/cask                # Tap the Caskroom/Cask repository from Github using HTTPS.
-$ brew search visual-studio-code        # Searches all known Casks for a partial or exact match.
-$ brew cask info visual-studio-code     # Displays information about the given Cask
-$ brew cask install visual-studio-code  # Install the given cask.
-$ brew cleanup                          # For all installed or specific formulae, remove any older versions from the cellar.
+# TODO: установить через brew iTerm2, vs-code-insiders, fira-code
+brew install shellcheck
+brew install jq
+brew install nvm
+brew intall yarn
+nvm install v8.9
+npm install -g spaceship-prompt
+
+brew cask install brave-browser
+brew cask install tor-browser
+brew cask install notion
+# and etc...
+
+mkd ~/workspaces
+```
+
+Add a Spacer to the Application Side of Your Dock
+
+
+```sh
+defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
+# or add small spacer
+defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}' && killall Dock
 ```
 
 
+Disable recent apps
 
-### Other apps
+```
+defaults write com.apple.dock show-recents -bool FALSE
+```
 
-* 1Password
-* iA Writer
-* Sip / Color Snapper2
-* Chromium
-* IntelliJ IDEA
-* iTerm2
-* Skype
-* Telegram
-* Tunnelblick ?
-* WebStorm
-* Yandex Browser
-* Adium
-* Android file transfer
-* BetterZip
-* CleanMyMac 3
-* Fantastical 2
-* iA Writer
-* iHex
-* 1Password
-* zoc7
-* VLC
-* Parallels
-* Transmit
-* Tor
-* Sublime Text 3
-* Sketch
-* Robomongo
-* MAMP
+
+Reset the Dock to its default state
+
+```
+defaults delete com.apple.dock; killall Dock
+```
+
+```sh
+defaults write com.apple.dock show-process-indicators -bool true
+efaults write com.apple.dock autohide -bool true
+```
+
+
+Don't forget to setup macos defaults
+
+```
+bash .macos
+```

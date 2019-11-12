@@ -7,13 +7,12 @@ function doIt() {
 		rsync --exclude ".git/" \
 			--exclude ".DS_Store" \
 			--exclude ".idea/" \
+			--exclude ".macos" \
 			--exclude "iterm2/" \
+			--exclude "subl/" \
 			--exclude "bootstrap.sh" \
 			--exclude "README.md" \
 			-avh --no-perms . ~;
-
-		source "$HOME/.aliases";
-		source "$HOME/.functions";
 	else
 		echo "Shellcheck: failed!"
 	fi;
