@@ -586,8 +586,10 @@
 	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>440 450 799 448 0 0 1680 1027 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>530 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>520 16 1438 1011 0 0 1680 1027 </string>
+	<string>238 133 1005 742 0 0 1680 1027 </string>
 	<key>NeverWarnAboutOverrides</key>
 	<true/>
 	<key>NeverWarnAboutOverrides_selection</key>
@@ -2220,7 +2222,10 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.6</string>
+		<string>3.3.7</string>
 	</array>
+	<key>NoSyncAutoBurialReveal</key>
+	<true/>
 	<key>NoSyncConfirmRunOpenFile</key>
 	<true/>
 	<key>NoSyncConfirmRunOpenFile_selection</key>
@@ -2235,7 +2240,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>1F15CBB6-02F3-4A0F-97B3-1B872E7BB9A0</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>7</integer>
+	<integer>21</integer>
 	<key>NoSyncNewTabFromTmuxOpensTmux</key>
 	<true/>
 	<key>NoSyncNewTabFromTmuxOpensTmux_selection</key>
@@ -3026,15 +3031,16 @@
 	</dict>
 	<key>NoSyncSearchHistory2</key>
 	<array>
-		<string>zalupa</string>
-		<string>xalupa</string>
-		<string>REALTY</string>
-		<string>REALTY_USER</string>
-		<string>READ</string>
-		<string>realty_U</string>
-		<string>User</string>
-		<string>blackbox</string>
-		<string>blackboxblackbox</string>
+		<string>docker</string>
+		<string>level</string>
+		<string>req.user</string>
+		<string>req.user77</string>
+		<string>req.user777\</string>
+		<string>findUser</string>
+		<string>uuuu</string>
+		<string>poffer</string>
+		<string>copy</string>
+		<string>sourcema</string>
 	</array>
 	<key>NoSyncSuppressRestartSessionConfirmationAlert</key>
 	<true/>
@@ -3060,6 +3066,50 @@
 	<false/>
 	<key>PromptOnQuit</key>
 	<false/>
+	<key>QuickLookPreview_CAAA8A67-A129-4B62-8681-A3C7B3B3108B.WebKit2ColorFilterEnabled</key>
+	<true/>
+	<key>QuickLookPreview_CAAA8A67-A129-4B62-8681-A3C7B3B3108B.WebKit2DatabasesEnabled</key>
+	<false/>
+	<key>QuickLookPreview_CAAA8A67-A129-4B62-8681-A3C7B3B3108B.WebKit2HTTPEquivEnabled</key>
+	<false/>
+	<key>QuickLookPreview_CAAA8A67-A129-4B62-8681-A3C7B3B3108B.WebKit2JavaEnabled</key>
+	<false/>
+	<key>QuickLookPreview_CAAA8A67-A129-4B62-8681-A3C7B3B3108B.WebKit2JavaScriptCanOpenWindowsAutomatically</key>
+	<false/>
+	<key>QuickLookPreview_CAAA8A67-A129-4B62-8681-A3C7B3B3108B.WebKit2JavaScriptEnabled</key>
+	<false/>
+	<key>QuickLookPreview_CAAA8A67-A129-4B62-8681-A3C7B3B3108B.WebKit2LocalStorageEnabled</key>
+	<false/>
+	<key>QuickLookPreview_CAAA8A67-A129-4B62-8681-A3C7B3B3108B.WebKit2PluginsEnabled</key>
+	<false/>
+	<key>QuickLookPreview_CAAA8A67-A129-4B62-8681-A3C7B3B3108B.WebKit2PrivateBrowsingEnabled</key>
+	<false/>
+	<key>QuickLookPreview_CAAA8A67-A129-4B62-8681-A3C7B3B3108B.WebKit2SuppressesIncrementalRendering</key>
+	<true/>
+	<key>QuickLookPreview_CAAA8A67-A129-4B62-8681-A3C7B3B3108B.WebKit2UsesEncodingDetector</key>
+	<true/>
+	<key>QuickLookPreview_E7F8EDE6-498B-469D-9F21-E71541B7553B.WebKit2ColorFilterEnabled</key>
+	<true/>
+	<key>QuickLookPreview_E7F8EDE6-498B-469D-9F21-E71541B7553B.WebKit2DatabasesEnabled</key>
+	<false/>
+	<key>QuickLookPreview_E7F8EDE6-498B-469D-9F21-E71541B7553B.WebKit2HTTPEquivEnabled</key>
+	<false/>
+	<key>QuickLookPreview_E7F8EDE6-498B-469D-9F21-E71541B7553B.WebKit2JavaEnabled</key>
+	<false/>
+	<key>QuickLookPreview_E7F8EDE6-498B-469D-9F21-E71541B7553B.WebKit2JavaScriptCanOpenWindowsAutomatically</key>
+	<false/>
+	<key>QuickLookPreview_E7F8EDE6-498B-469D-9F21-E71541B7553B.WebKit2JavaScriptEnabled</key>
+	<false/>
+	<key>QuickLookPreview_E7F8EDE6-498B-469D-9F21-E71541B7553B.WebKit2LocalStorageEnabled</key>
+	<false/>
+	<key>QuickLookPreview_E7F8EDE6-498B-469D-9F21-E71541B7553B.WebKit2PluginsEnabled</key>
+	<false/>
+	<key>QuickLookPreview_E7F8EDE6-498B-469D-9F21-E71541B7553B.WebKit2PrivateBrowsingEnabled</key>
+	<false/>
+	<key>QuickLookPreview_E7F8EDE6-498B-469D-9F21-E71541B7553B.WebKit2SuppressesIncrementalRendering</key>
+	<true/>
+	<key>QuickLookPreview_E7F8EDE6-498B-469D-9F21-E71541B7553B.WebKit2UsesEncodingDetector</key>
+	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -3071,8 +3121,10 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-11-10T21:40:56Z</date>
+	<date>2019-12-25T20:35:32Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SavePasteHistory</key>
 	<true/>
@@ -3141,7 +3193,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.6</string>
+	<string>3.3.7</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
