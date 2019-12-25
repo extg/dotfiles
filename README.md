@@ -92,6 +92,7 @@ npm install -g spaceship-prompt
 brew cask install brave-browser
 brew cask install tor-browser
 brew cask install notion
+brew cask install postman
 # and etc...
 
 mkd ~/workspaces
