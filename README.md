@@ -10,6 +10,11 @@
 ~/.zlogout
 ```
 
+diff versions of file
+```
+gd --no-index ~/.zshrc ~/Workspaces/dotfiles/.zshrc
+```
+
 
 ## `ssh`
 
