@@ -55,7 +55,7 @@ function gclone() {
   if [[ -n $2 ]]; then
     DIR="$2";
   fi;
-  
+
   git clone "$@" && cd "$DIR" || exit
 }
 
@@ -86,6 +86,12 @@ function smartresize() {
 }
 
 # fingerprint ~/.ssh/id_rsa
-function fingerprint() { 
-    ssh-keygen -lf "$1" -E md5 
+function fingerprint() {
+    ssh-keygen -lf "$1" -E md5
+}
+
+# https://stackoverflow.com/questions/3964068/zsh-automatically-run-ls-after-every-cd
+function chpwd() {
+  emulate -L zsh
+  ls -d -- */
 }

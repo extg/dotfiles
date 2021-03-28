@@ -102,6 +102,9 @@ export LANG=en_US.UTF-8
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=" -R "
 
+# Disabling Autocorrect
+unsetopt correct_all
+
 # alias less='less -M -N -g -i -J --underline-special --SILENT'
 # alias more='less'
 
@@ -110,7 +113,11 @@ test -e "$HOME/.exports" && source "$HOME/.exports"
 source "$HOME/.aliases";
 source "$HOME/.functions";
 
+SPACESHIP_DOCKER_SHOW="false"
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+
+# run "brew install ruby" before
+export GEM_HOME="$HOME/.gem"
