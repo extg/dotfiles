@@ -58,7 +58,7 @@ plugins=(git ssh-agent)
 
 # Setup ssh-agent
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_rsa extg_rsa yandex_classifieds
+# zstyle :omz:plugins:ssh-agent identities id_rsa extg_rsa
 
 
 source $ZSH/oh-my-zsh.sh
