@@ -23,8 +23,10 @@ gd --no-index ~/.zshrc ~/Workspaces/dotfiles/.zshrc
 Generate a new key:
 
 ```sh
-ssh-keygen -t rsa -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
+
+> [Upgrade Your SSH Key to Ed25519](https://medium.com/risan/upgrade-your-ssh-key-to-ed25519-c6e8d60d3c54#:~:text=Today%2C%20the%20RSA%20is%20the,3072%20that%20has%20544%20characters.)
 
 Fingerprint:
 

@@ -92,6 +92,6 @@ function fingerprint() {
 
 # https://stackoverflow.com/questions/3964068/zsh-automatically-run-ls-after-every-cd
 function chpwd() {
-  emulate -L zsh
-  ls -d -- */
+  # emulate -L zsh
+  ls -lrthG
 }
