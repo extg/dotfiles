@@ -37,6 +37,8 @@ ssh-keygen -lf ./id_rsa -E md5
 
 ## xattr
 
+снимаем расширенные аттрибуты с файла, но вопрос зачем? и как они там оказались?
+
 * Что значит `@` в выводе `ls -l`
   — it means the file has extended attributes.
     [Full answer](http://unix.stackexchange.com/questions/1646/or-mark-after-running-ls-al)
@@ -49,6 +51,14 @@ ssh-keygen -lf ./id_rsa -E md5
 $ xattr -c s.7z
 $ xattr s.7z
 ```
+
+Для того, чтобы снять флаг карантина со всех скачанных файлов в папке Downloads,
+выполните команду для Mac OS X 10.6:
+
+```
+xattr -d -r com.apple.quarantine ~/Downloads
+```
+
 
 ## links
 * https://github.com/mathiasbynens/dotfiles
@@ -69,40 +79,61 @@ $ xattr s.7z
 
 ## System setup
 
-Войти в iCloud, настроить синхронизацию, скачать приложения из AppStore
+Войти в iCloud, настроить синхронизацию, ~~скачать приложения из AppStore~~
+вроде как все уже через brew
 
-### Установить [brew](https://brew.sh/index_ru)
+
+### Install [brew](https://brew.sh/index_ru)
 
 ```sh
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
+
+### Install apps from `Brewfile`
+
+install everything from the `Brewfile`
+
+```
+brew bundle
+```
+
+> for save all installed apps run `brew bundle dump` it creates
+> `Brewfile` in the current directory from currently-installed packages
+
+
+### Other usefull settings
+
+> iTerm2 was installed via brew
 
 Set iTerm2 as default shell (in menu bar)
 
-Установить [FiraCode](https://github.com/tonsky/FiraCode)
-https://github.com/tonsky/FiraCode/wiki/Installing#macos
 
-Настройка vs code http://shanalikhan.github.io/2015/12/15/Visual-Studio-Code-Sync-Settings.html
-
-
-[spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
+Set default node
 
 ```
-# TODO: установить через brew iTerm2, vs-code-insiders, fira-code
-brew install shellcheck
-brew install jq
-brew install nvm
-brew intall yarn
-nvm install v8.9
+nvm install v12
+```
+
+
+Install [FiraCode](https://github.com/tonsky/FiraCode)
+https://github.com/tonsky/FiraCode/wiki/Installing#macos
+
+
+Setup VS Code http://shanalikhan.github.io/2015/12/15/Visual-Studio-Code-Sync-Settings.html
+
+
+Setup [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
+
+```
 npm install -g spaceship-prompt
+```
 
-brew cask install brave-browser
-brew cask install tor-browser
-brew cask install notion
-brew cask install postman
-# and etc...
 
-mkd ~/workspaces
+Create `Workspaces`
+
+```
+mkd ~/Workspaces
 ```
 
 Add a Spacer to the Application Side of Your Dock
