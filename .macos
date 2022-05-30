@@ -22,3 +22,6 @@ mkdir -p "$HOME/Screenshots"
 defaults write com.apple.screencapture location "$HOME/Screenshots"
 defaults write com.apple.screencapture type -string jpg
 killall SystemUIServer
+
+# disalbe screen capture sound
+defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0
