@@ -91,7 +91,7 @@ export LANG=en_US.UTF-8
 # TODO: и надо ли это
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-  export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
@@ -104,6 +104,11 @@ export LESS=" -R "
 
 # Disabling Autocorrect
 unsetopt correct_all
+
+# автоматическое добавление ключей в ssh-agent
+# [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)"
+# ssh-add $HOME/.ssh/id_*
+
 
 # alias less='less -M -N -g -i -J --underline-special --SILENT'
 # alias more='less'

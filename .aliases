@@ -13,7 +13,7 @@ function _grho() {
   git reset --hard "origin/$(git_current_branch)"
 }
 
-alias c="code-insiders"
+alias c="code"
 
 # git
 alias g="git"
