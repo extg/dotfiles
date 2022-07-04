@@ -176,10 +176,16 @@ bash .macos
 
 Duti requires you to use an know application's bundle id in order to set it as the default for a given document type. Use the following command to list all known ids for your system.
 
-```
+```sh
+# List all apps bundle ids
 lsappinfo | grep 'bundleID="' | cut -d'"' -f2 | sort
+
+# OR List/Search all existing UTIs (Uniform Type Identifiers)
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -dump
 ```
 
-```
+
+
+```sh
 ./setup-default-apps.sh
 ```
