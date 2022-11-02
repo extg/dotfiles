@@ -126,3 +126,9 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 # run "brew install ruby" before
 export GEM_HOME="$HOME/.gem"
+export PATH=$HOME/bin:$PATH
+export PATH="$HOME/.gem/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+source "$HOME/.cargo/env"
