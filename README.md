@@ -189,3 +189,20 @@ lsappinfo | grep 'bundleID="' | cut -d'"' -f2 | sort
 ```sh
 ./setup-default-apps.sh
 ```
+
+
+### Setup webstorm [Command-line interface](https://www.jetbrains.com/help/webstorm/working-with-the-ide-features-from-command-line.html)
+
+You can create a shell script with this command in a directory from your PATH environment variable. For example, create the file **/usr/local/bin/webstorm** with the following contents:
+
+```sh
+touch /usr/local/bin/webstorm
+chmod +x /usr/local/bin/webstorm
+pbpaste > /usr/local/bin/webstorm
+```
+
+```sh
+#!/bin/sh
+
+open -na "WebStorm.app" --args "$@"
+```

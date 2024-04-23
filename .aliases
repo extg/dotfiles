@@ -14,6 +14,7 @@ function _grho() {
 }
 
 alias c="code"
+alias ws="webstorm"
 
 # git
 alias g="git"
@@ -60,3 +61,26 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 # Alias for dates like in GNU Command Line in Linux (using Homebrew coreutils)
 # alias date='gdate'
+#This formula has created a default database cluster with:
+#  initdb --locale=C -E UTF-8 /usr/local/var/postgresql@15
+#For more details, read:
+#  https://www.postgresql.org/docs/15/app-initdb.html
+#
+#postgresql@15 is keg-only, which means it was not symlinked into /usr/local,
+#because this is an alternate version of another formula.
+#
+#If you need to have postgresql@15 first in your PATH, run:
+#echo 'export PATH="/usr/local/opt/postgresql@15/bin:$PATH"' >> ~/.zshrc
+export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
+#For compilers to find postgresql@15 you may need to set:
+export LDFLAGS="-L/usr/local/opt/postgresql@15/lib"
+export CPPFLAGS="-I/usr/local/opt/postgresql@15/include"
+
+#For pkg-config to find postgresql@15 you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/postgresql@15/lib/pkgconfig"
+
+#To start postgresql@15 now and restart at login:
+#brew services start postgresql@15
+#Or, if you don't want/need a background service you can just run:
+#  LC_ALL="C" /usr/local/opt/postgresql@15/bin/postgres -D /usr/local/var/postgresql@15
+
