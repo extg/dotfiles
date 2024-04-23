@@ -56,9 +56,23 @@ plugins=(git ssh-agent)
 # export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Resolve symbolic links in ~/.ssh/identities and add to identities array
+ssh_identities=()
+for identity in ~/.ssh/identities/*; do
+    # Check if the file is a symlink and resolve it
+    if [[ -L "$identity" ]]; then
+        real_identity=$(readlink -f "$identity")
+        ssh_identities+=("$real_identity")
+    else
+        ssh_identities+=("$identity")
+    fi
+done
+
 # Setup ssh-agent
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-# zstyle :omz:plugins:ssh-agent identities id_rsa extg_rsa
+zstyle :omz:plugins:ssh-agent quiet yes
+zstyle :omz:plugins:ssh-agent identities $ssh_identities
+# To check added identites use `ssh-add -l``
 
 
 source $ZSH/oh-my-zsh.sh
@@ -130,5 +144,11 @@ export PATH=$HOME/bin:$PATH
 export PATH="$HOME/.gem/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"
+export PATH="/Applications/IntelliJ IDEA 2023.3 CE EAP.app/Contents/MacOS:$PATH"
 
 source "$HOME/.cargo/env"
+
+eval "$(direnv hook zsh)"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
