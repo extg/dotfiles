@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="default"
+# ZSH_THEME="default"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -71,7 +71,7 @@ done
 # Setup ssh-agent
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent quiet yes
-zstyle :omz:plugins:ssh-agent identities $ssh_identities
+zstyle :omz:plugins:ssh-agent identities $ssh_identities /Users/vk/.ssh/id_rsa
 # To check added identites use `ssh-add -l``
 
 
@@ -132,10 +132,6 @@ test -e "$HOME/.exports" && source "$HOME/.exports"
 source "$HOME/.aliases";
 source "$HOME/.functions";
 
-SPACESHIP_DOCKER_SHOW="false"
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 # run "brew install ruby" before
@@ -152,3 +148,9 @@ source "$HOME/.cargo/env"
 eval "$(direnv hook zsh)"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
+
+SPACESHIP_DOCKER_SHOW="false"
+# Set Spaceship ZSH as a prompt
+# autoload -U promptinit; promptinit
+# prompt spaceship
+source "/usr/local/opt/spaceship/spaceship.zsh"
