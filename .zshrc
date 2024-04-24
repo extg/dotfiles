@@ -149,8 +149,10 @@ eval "$(direnv hook zsh)"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
 
-SPACESHIP_DOCKER_SHOW="false"
+# SPACESHIP_DOCKER_SHOW="false"
 # Set Spaceship ZSH as a prompt
 # autoload -U promptinit; promptinit
 # prompt spaceship
-source "/usr/local/opt/spaceship/spaceship.zsh"
+# source "/usr/local/opt/spaceship/spaceship.zsh"
+# 
+eval "$(starship init zsh)"
