@@ -98,7 +98,7 @@ install everything from the `Brewfile`
 brew bundle
 ```
 
-> for save all installed apps run `brew bundle dump` it creates
+> for save all installed apps run `brew bundle dump -f` it creates
 > `Brewfile` in the current directory from currently-installed packages
 
 
