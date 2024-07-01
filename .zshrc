@@ -156,3 +156,15 @@ export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
 # source "/usr/local/opt/spaceship/spaceship.zsh"
 # 
 eval "$(starship init zsh)"
+
+# bun completions
+[ -s "/Users/vk/.bun/_bun" ] && source "/Users/vk/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# TODO: Is it still needed in case of corepack?
+# Yarn version manager
+export YVM_DIR=/usr/local/opt/yvm
+[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh

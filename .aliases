@@ -7,7 +7,14 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias tmuxa="tmux attach || tmux new"
 
-alias y="yarn"
+alias y="corepack yarn"
+alias p="corepack pnpm"
+alias yarn="corepack yarn"
+alias yarnpkg="corepack yarnpkg"
+alias pnpm="corepack pnpm"
+alias pnpx="corepack pnpx"
+alias npm="corepack npm"
+alias npx="corepack npx"
 
 function _grho() {
   git reset --hard "origin/$(git_current_branch)"
@@ -83,4 +90,3 @@ export PKG_CONFIG_PATH="/usr/local/opt/postgresql@15/lib/pkgconfig"
 #brew services start postgresql@15
 #Or, if you don't want/need a background service you can just run:
 #  LC_ALL="C" /usr/local/opt/postgresql@15/bin/postgres -D /usr/local/var/postgresql@15
-
