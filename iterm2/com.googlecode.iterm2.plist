@@ -892,6 +892,8 @@ Clear Buffer</string>
 			<string>No</string>
 			<key>Custom Directory</key>
 			<string>Advanced</string>
+			<key>Custom Locale</key>
+			<string>en_US.UTF-8</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -923,6 +925,8 @@ Clear Buffer</string>
 			<string>6BD6473B-C4F1-41EA-A365-060096A615D7</string>
 			<key>Horizontal Spacing</key>
 			<real>0.90000000000000002</real>
+			<key>Icon</key>
+			<integer>0</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Use Transparency</key>
@@ -1257,6 +1261,8 @@ Clear Buffer</string>
 			<false/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
+			<key>Prevent Opening in a Tab</key>
+			<false/>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
@@ -1308,6 +1314,8 @@ Clear Buffer</string>
 			<false/>
 			<key>Session Close Undo Timeout</key>
 			<integer>0</integer>
+			<key>Set Local Environment Vars</key>
+			<integer>2</integer>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Silence Bell</key>
@@ -1336,7 +1344,9 @@ Clear Buffer</string>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Thin Strokes</key>
-			<integer>2</integer>
+			<integer>1</integer>
+			<key>Title Components</key>
+			<integer>513</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
@@ -1344,7 +1354,7 @@ Clear Buffer</string>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
-			<true/>
+			<false/>
 			<key>Use Bright Bold</key>
 			<true/>
 			<key>Use Cursor Guide</key>
@@ -2249,7 +2259,7 @@ Clear Buffer</string>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowNewOutputIndicator</key>
 	<true/>
 	<key>ShowPaneTitles</key>
