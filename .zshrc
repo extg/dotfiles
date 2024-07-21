@@ -168,3 +168,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Yarn version manager
 export YVM_DIR=/usr/local/opt/yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
+
+# for poetry
+export PATH="/Users/vk/.local/bin:$PATH"
