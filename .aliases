@@ -22,6 +22,7 @@ function _grho() {
 
 alias c="code"
 alias ws="webstorm"
+alias github="$(which gh)"
 
 # git
 alias g="git"
