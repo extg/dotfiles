@@ -7,14 +7,14 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias tmuxa="tmux attach || tmux new"
 
-alias y="corepack yarn"
-alias p="corepack pnpm"
-alias yarn="corepack yarn"
-alias yarnpkg="corepack yarnpkg"
-alias pnpm="corepack pnpm"
-alias pnpx="corepack pnpx"
-alias npm="corepack npm"
-alias npx="corepack npx"
+# alias yarn="corepack yarn"
+# alias yarnpkg="corepack yarnpkg"
+# alias pnpm="corepack pnpm"
+# alias pnpx="corepack pnpx"
+# alias npm="corepack npm"
+# alias npx="corepack npx"
+alias y="yarn"
+alias p="pnpm"
 
 function _grho() {
   git reset --hard "origin/$(git_current_branch)"
@@ -26,7 +26,7 @@ alias github="$(which gh)"
 
 # git
 alias g="git"
-alias gh="git hist"
+alias ghs="git hist"
 # TODO: Remove after https://github.com/robbyrussell/oh-my-zsh/pull/5112
 alias grho="_grho"
 
