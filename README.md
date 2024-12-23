@@ -1,6 +1,6 @@
 # `dotfiles`
 
-Порядок загрузки:
+Loading order:
 
 ```
 ~/.zshenv
@@ -37,9 +37,9 @@ ssh-keygen -lf ./id_rsa -E md5
 
 ## xattr
 
-снимаем расширенные аттрибуты с файла, но вопрос зачем? и как они там оказались?
+Removing extended attributes from a file, but the question is why? and how did they get there?
 
-* Что значит `@` в выводе `ls -l`
+* What does `@` mean in the output of `ls -l`
   — it means the file has extended attributes.
     [Full answer](http://unix.stackexchange.com/questions/1646/or-mark-after-running-ls-al)
 * How do I remove the “extended attributes”
@@ -52,8 +52,8 @@ $ xattr -c s.7z
 $ xattr s.7z
 ```
 
-Для того, чтобы снять флаг карантина со всех скачанных файлов в папке Downloads,
-выполните команду для Mac OS X 10.6:
+To remove the quarantine flag from all downloaded files in the Downloads folder,
+execute the command for Mac OS X 10.6:
 
 ```
 xattr -d -r com.apple.quarantine ~/Downloads
@@ -73,14 +73,14 @@ xattr -d -r com.apple.quarantine ~/Downloads
 * https://github.com/junegunn/fzf#key-bindings-for-command-line
 * https://github.com/bbatsov/prelude
 * https://sohabr.net/habr/post/248663/
-* сделать разделение по системам (Ubuntu, macOS)
-* вынести shellcheck в lint-staged
+* make a separation by systems (Ubuntu, macOS)
+* move shellcheck to lint-staged
 
 
 ## System setup
 
-Войти в iCloud, настроить синхронизацию, ~~скачать приложения из AppStore~~
-вроде как все уже через brew
+Log in to iCloud, set up synchronization, ~~download applications from the AppStore~~
+it seems everything is already through brew
 
 
 ### Install [brew](https://brew.sh/index_ru)
@@ -102,7 +102,7 @@ brew bundle
 > `Brewfile` in the current directory from currently-installed packages
 
 
-### Other usefull settings
+### Other useful settings
 
 > iTerm2 was installed via brew
 
@@ -174,7 +174,7 @@ bash .macos
 
 ## Setup default apps
 
-Duti requires you to use an know application's bundle id in order to set it as the default for a given document type. Use the following command to list all known ids for your system.
+Duti requires you to use a known application's bundle id in order to set it as the default for a given document type. Use the following command to list all known ids for your system.
 
 ```sh
 # List all apps bundle ids
