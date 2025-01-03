@@ -58,21 +58,21 @@ plugins=(git ssh-agent)
 
 # Resolve symbolic links in ~/.ssh/identities and add to identities array
 ssh_identities=()
-for identity in ~/.ssh/identities/*; do
-    # Check if the file is a symlink and resolve it
-    if [[ -L "$identity" ]]; then
-        real_identity=$(readlink -f "$identity")
-        ssh_identities+=("$real_identity")
-    else
-        ssh_identities+=("$identity")
-    fi
-done
+# for identity in ~/.ssh/identities/*; do
+#     # Check if the file is a symlink and resolve it
+#     if [[ -L "$identity" ]]; then
+#         real_identity=$(readlink -f "$identity")
+#         ssh_identities+=("$real_identity")
+#     else
+#         ssh_identities+=("$identity")
+#     fi
+# done
 
 # Setup ssh-agent
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent quiet yes
-zstyle :omz:plugins:ssh-agent identities $ssh_identities /Users/vk/.ssh/id_rsa
-# To check added identites use `ssh-add -l``
+zstyle :omz:plugins:ssh-agent identities $ssh_identities
+# To check added identites use `ssh-add -l`
 
 
 source $ZSH/oh-my-zsh.sh
