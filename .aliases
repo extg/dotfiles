@@ -7,6 +7,8 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias tmuxa="tmux attach || tmux new"
 
+# disable auto-setting of `packageManager` when corepack is enabled
+export COREPACK_ENABLE_AUTO_PIN=0
 # alias yarn="corepack yarn"
 # alias yarnpkg="corepack yarnpkg"
 # alias pnpm="corepack pnpm"
