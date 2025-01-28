@@ -22,17 +22,14 @@ function _grho() {
   git reset --hard "origin/$(git_current_branch)"
 }
 
-alias c="code"
-alias ws="webstorm"
+alias c="cursor"
 alias github="$(which gh)"
 
 # git
 alias g="git"
-alias ghs="git hist"
+alias ghs="git hist" # its important not to use `gh`, bcs it conflicts with github tool
 # TODO: Remove after https://github.com/robbyrussell/oh-my-zsh/pull/5112
 alias grho="_grho"
-
-alias stree="open -a SourceTree"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
