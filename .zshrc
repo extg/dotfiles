@@ -171,3 +171,9 @@ export YVM_DIR=/usr/local/opt/yvm
 
 # for poetry
 export PATH="/Users/vk/.local/bin:$PATH"
+
+# pyenv setup
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
