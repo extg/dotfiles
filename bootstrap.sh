@@ -4,15 +4,17 @@ function doIt() {
 	if shellcheck --exclude=SC2139,SC1090 .functions .aliases bootstrap.sh; then
 		echo "Shellcheck: ok!"
 
-		rsync --exclude ".git/" \
-			--exclude ".DS_Store" \
-			--exclude ".idea/" \
-			--exclude ".macos" \
-			--exclude "iterm2/" \
-			--exclude "subl/" \
-			--exclude "bootstrap.sh" \
-			--exclude "README.md" \
-			-avh --no-perms . ~;
+		rsync -avh --no-perms \
+			.aliases \
+			.editorconfig \
+			.functions \
+			.gitconfig \
+			.gitignore \
+			.oh-my-zsh \
+			.prettierrc \
+			.vimrc \
+			.zshrc \
+			~/;
 	else
 		echo "Shellcheck: failed!"
 	fi;

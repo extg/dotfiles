@@ -25,3 +25,13 @@ killall SystemUIServer
 
 # disalbe screen capture sound
 defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0
+
+# Set Command+Space for input source switching
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 "{enabled = 1; value = {parameters = (32, 49, 1048576); type = standard; }; }"
+
+# Set Control+Space for Spotlight
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "{enabled = 1; value = {parameters = (32, 49, 262144); type = standard; }; }"
+
+# Restart cfprefsd and Spotlight to apply changes
+killall cfprefsd
+killall Spotlight

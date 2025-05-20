@@ -20,6 +20,7 @@ This repository contains my personal dotfiles and setup instructions for a new M
   cd ~/Workspaces/dotfiles
   ```
 - Install applications from Brewfile: `brew bundle`
+- Run bootstrap script to set up dotfiles: `./bootstrap.sh`
 - Configure [default applications](recipes/default-apps-setup.md)
 
 ### 3. Development Environment
@@ -31,6 +32,7 @@ This repository contains my personal dotfiles and setup instructions for a new M
 ### 4. System Configuration
 - Apply [macOS defaults](recipes/macos-defaults.md): `bash .macos`
 - Configure Dock, Finder, and system preferences
+- Set up [keyboard shortcuts](recipes/macos-defaults.md#keyboard-shortcuts) for input source switching and Spotlight
 
 ## Recipe Collection
 

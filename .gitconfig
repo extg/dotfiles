@@ -127,7 +127,9 @@
 
 [user]
 	name = extg
-	email = extg@yandex-team.ru
+	email = extg@users.noreply.github.com
 
 [branch]
 	sort = -committerdate
+[init]
+	defaultBranch = main
