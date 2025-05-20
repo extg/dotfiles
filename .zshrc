@@ -11,6 +11,18 @@ setopt autocd
 setopt extendedglob
 unsetopt correct_all
 
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Set name of the theme to load --- using Starship instead
+ZSH_THEME=""
+
+# Oh My Zsh plugins
+plugins=(git z zsh-autosuggestions zsh-syntax-highlighting)
+
+# Load Oh My Zsh
+source $ZSH/oh-my-zsh.sh
+
 # Homebrew completions
 if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -27,8 +39,6 @@ fi
 test -e "$HOME/.exports" && source "$HOME/.exports"
 source "$HOME/.aliases"
 source "$HOME/.functions"
-# Oh-My-Zsh aliases
-test -e "$HOME/.oh-my-zsh-aliases/oh-my-zsh-aliases.zsh" && source "$HOME/.oh-my-zsh-aliases/oh-my-zsh-aliases.zsh"
 
 # Syntax highlighting in less
 export LESSOPEN="| src-hilite-lesspipe.sh %s"

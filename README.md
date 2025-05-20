@@ -32,6 +32,26 @@ This repository contains my personal dotfiles and setup instructions for a new M
   - Configure default applications
   - Sync dotfiles to your home directory
 
+### 3. Shell Setup with Oh My Zsh and Starship
+- Install [Oh My Zsh](https://ohmyz.sh/):
+  ```sh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ```
+- Install recommended plugins:
+  ```sh
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  ```
+- Ensure [Starship](https://starship.rs/) is installed (should be in Brewfile):
+  ```sh
+  brew install starship
+  ```
+- Update `.zshrc` to include Oh My Zsh plugins and Starship prompt
+- Reload shell settings:
+  ```sh
+  source ~/.zshrc
+  ```
+
 
 ## Working with Dotfiles
 
