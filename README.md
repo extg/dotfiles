@@ -47,7 +47,10 @@ This repository contains my personal dotfiles and setup instructions for a new M
   ```sh
   brew install starship
   ```
-- Update `.zshrc` to include Oh My Zsh plugins and Starship prompt
+- Run the dotfiles sync script to update your `.zshrc` with Oh My Zsh plugins and Starship prompt:
+  ```sh
+  ./sync-dotfiles.sh
+  ```
 - Reload shell settings:
   ```sh
   source ~/.zshrc
