@@ -42,6 +42,14 @@ This repository contains my personal dotfiles and setup instructions for a new M
 ### Updating Brewfile
 - Use `brew bundle dump --force` to regenerate the entire Brewfile based on currently installed packages
 - Run `brew bundle` to install any new packages
+- To sync your installed packages with your Brewfile (installing missing and removing unlisted packages):
+  ```sh
+  brew bundle install --cleanup
+  ```
+- To remove packages not specified in your Brewfile without installing anything:
+  ```sh
+  brew bundle cleanup --force
+  ```
 
 
 ## Recipe Collection
