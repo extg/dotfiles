@@ -19,7 +19,7 @@ This repository contains my personal dotfiles and setup instructions for a new M
 - Clone this repository:
   ```sh
   mkdir ~/Workspaces
-  git clone https://github.com/extg/dotfiles.git ~/Workspaces/dotfiles
+  git clone git@github.com:extg/dotfiles.git ~/Workspaces/dotfiles
   cd ~/Workspaces/dotfiles
   ```
 - Run the initialization script to set up everything at once:
