@@ -57,3 +57,12 @@ This repository contains my personal dotfiles and setup instructions for a new M
 ## Recipe Collection
 
 For detailed setup instructions on each component, see the [recipe collection](recipes/index.md).
+
+
+## Useful References
+
+- [Mathias Bynens' dotfiles](https://github.com/mathiasbynens/dotfiles)
+- [Awesome dotfiles collection](https://github.com/webpro/awesome-dotfiles)
+- [thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles)
+- [Nikita Sobolev's dotfiles](https://github.com/sobolevn/dotfiles)
+- [OleksandrKucherenko's Mac setup script](https://gist.github.com/OleksandrKucherenko/e76220f22359e0e49c81c5474b1457a1)
