@@ -9,6 +9,7 @@ This repository contains my personal dotfiles and setup instructions for a new M
 - Complete initial macOS setup (Apple ID, iCloud login)
 - Install system updates (Apple menu → About This Mac → Software Update)
 - Configure keyboard shortcut for changing input sources (System Settings → Keyboard → Keyboard Shortcuts → Input Sources)
+- Install 1Password from the App Store
 - Install [Homebrew](https://brew.sh/) package manager:
   ```sh
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
