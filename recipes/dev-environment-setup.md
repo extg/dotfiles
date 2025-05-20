@@ -19,10 +19,16 @@ https://github.com/tonsky/FiraCode/wiki/Installing#macos
 
 ## Shell Prompt
 
-Setup [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt):
+Setup [starship](https://github.com/starship/starship):
 
 ```sh
-npm install -g spaceship-prompt
+curl -sS https://starship.rs/install.sh | sh
+```
+
+Add the following to the end of `~/.zshrc`:
+
+```sh
+eval "$(starship init zsh)"
 ```
 
 ## Visual Studio Code

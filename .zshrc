@@ -149,14 +149,6 @@ eval "$(direnv hook zsh)"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
 
-# SPACESHIP_DOCKER_SHOW="false"
-# Set Spaceship ZSH as a prompt
-# autoload -U promptinit; promptinit
-# prompt spaceship
-# source "/usr/local/opt/spaceship/spaceship.zsh"
-# 
-eval "$(starship init zsh)"
-
 # bun completions
 [ -s "/Users/vk/.bun/_bun" ] && source "/Users/vk/.bun/_bun"
 
@@ -180,3 +172,5 @@ eval "$(pyenv init -)"
 
 # Added by Windsurf - Next
 export PATH="/Users/vk/.codeium/windsurf/bin:$PATH"
+
+eval "$(starship init zsh)"
