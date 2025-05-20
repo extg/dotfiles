@@ -13,6 +13,7 @@ This repository contains my personal dotfiles and setup instructions for a new M
   ```sh
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```
+- Ensure SSH keys are set up in `~/.ssh` (AirDrop from old Mac or [create new keys](recipes/ssh-keygen.md))
 
 ### 2. Get Dotfiles & Core Applications
 - Clone this repository:
