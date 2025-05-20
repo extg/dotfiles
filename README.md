@@ -8,6 +8,7 @@ This repository contains my personal dotfiles and setup instructions for a new M
 ### 1. System Preparation
 - Complete initial macOS setup (Apple ID, iCloud login)
 - Install system updates (Apple menu → About This Mac → Software Update)
+- Configure keyboard shortcut for changing input sources (System Settings → Keyboard → Keyboard Shortcuts → Input Sources)
 - Install [Homebrew](https://brew.sh/) package manager:
   ```sh
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

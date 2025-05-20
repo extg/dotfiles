@@ -58,17 +58,3 @@ To set Command+Space for input source switching and Control+Space for Spotlight:
 6. Find "Spotlight" in the left sidebar
 7. Change "Show Spotlight search" to Control+Space (^ Space)
 8. Log out and log back in for changes to take effect
-
-Alternatively, use the following Terminal commands:
-
-```sh
-# Set Command+Space for input source switching
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 "{enabled = 1; value = {parameters = (32, 49, 1048576); type = standard; }; }"
-
-# Set Control+Space for Spotlight
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "{enabled = 1; value = {parameters = (32, 49, 262144); type = standard; }; }"
-
-# Restart cfprefsd and Spotlight to apply changes
-killall cfprefsd
-killall Spotlight
-``` 
