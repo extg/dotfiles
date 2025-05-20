@@ -16,8 +16,4 @@ echo "Setting default applications..."
 echo "Syncing dotfiles to home directory..."
 ./sync-dotfiles.sh
 
-# Download Oh-My-Zsh aliases
-echo "Downloading Oh-My-Zsh aliases..."
-./get-omz-aliases.sh
-
 echo "Initialization complete!" 

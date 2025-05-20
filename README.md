@@ -22,10 +22,6 @@ This repository contains my personal dotfiles and setup instructions for a new M
   git clone https://github.com/extg/dotfiles.git ~/Workspaces/dotfiles
   cd ~/Workspaces/dotfiles
   ```
-- Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) (required before running init.sh):
-  ```sh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  ```
 - Run the initialization script to set up everything at once:
   ```sh
   ./init.sh
