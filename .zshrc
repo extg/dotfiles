@@ -69,7 +69,7 @@ export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 # Rust
-source "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
 # Bun
 export BUN_INSTALL="$HOME/.bun"
