@@ -58,11 +58,15 @@ psql --version
 
 ### Step 5: Initial Setup
 
-Connect and set up the postgres user:
+On macOS with Homebrew's PostgreSQL, the default superuser is your system username (not 'postgres'). Connect using your username:
 
 ```bash
-psql -U postgres
-ALTER USER postgres WITH PASSWORD 'new_password';
+# Connect as your system user (e.g., if your username is 'vasily')
+psql postgres
+
+# If you want to create a 'postgres' superuser (optional)
+CREATE USER postgres SUPERUSER;
+ALTER USER postgres WITH PASSWORD 'postgres';
 ```
 
 ## Pro Tips
@@ -70,6 +74,7 @@ ALTER USER postgres WITH PASSWORD 'new_password';
 - Consider adding an alias for `psql` in your shell configuration
 - Include these steps in your shell setup script for new machines
 - If you need to switch between different PostgreSQL versions, consider using `brew unlink` and `brew link` commands
+- On macOS, the default PostgreSQL superuser is your system username, not 'postgres'
 
 ## References
 

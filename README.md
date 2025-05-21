@@ -62,7 +62,8 @@ This repository contains my personal dotfiles and setup instructions for a new M
   ```sh
   brew install postgresql@15
   brew link postgresql@15 --force
-  psql -U postgres
+  # Connect using your system username (not 'postgres')
+  psql postgres
   ```
   For detailed instructions, see [PostgreSQL Setup](recipes/postgresql-setup.md)
 
