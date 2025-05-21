@@ -84,8 +84,10 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# Initialize pyenv path - adds pyenv executables to PATH
 eval "$(pyenv init --path)"
+# Initialize pyenv shell integration - enables version switching, completions, etc.
 eval "$(pyenv init -)"
 
 # Windsurf
