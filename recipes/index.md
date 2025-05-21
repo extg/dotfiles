@@ -12,6 +12,7 @@ This directory contains modular setup instructions for various aspects of macOS 
 ## Development Setup
 
 - [Development Environment Setup](dev-environment-setup.md) - Configure dev tools and environments
+- [PostgreSQL Setup](postgresql-setup.md) - Set up PostgreSQL 15 with Homebrew
 - [SSH Key Generation](ssh-keygen.md) - Create and manage SSH keys
 - [Zsh Loading Order](zsh-loading-order.md) - Understand shell configuration loading
 - [Cursor App Signature Fix](cursor-signature-fix.md) - Fix signature validation errors

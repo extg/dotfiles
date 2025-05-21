@@ -57,6 +57,15 @@ This repository contains my personal dotfiles and setup instructions for a new M
   source ~/.zshrc
   ```
 
+### 4. Development Environment Setup
+- Set up PostgreSQL 15 (if needed):
+  ```sh
+  brew install postgresql@15
+  brew link postgresql@15 --force
+  psql -U postgres
+  ```
+  For detailed instructions, see [PostgreSQL Setup](recipes/postgresql-setup.md)
+
 
 ## Working with Dotfiles
 
