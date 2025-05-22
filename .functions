@@ -98,8 +98,8 @@ function chpwd() {
 
 # Configure git in the current project with the specified SSH key, user.name, and user.email
 function gconf() {
-  if [ $# -ne 3 ]; then
-    echo "Usage: gconf <ssh_key_path> <user_name> <user_email>"
+  if [ $# -lt 2 ]; then
+    echo "Usage: gconf <ssh_key_path> <user_name> [user_email]"
     return 1
   fi
   local ssh_key_path="$1"
