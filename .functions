@@ -104,7 +104,12 @@ function gconf() {
   fi
   local ssh_key_path="$1"
   local user_name="$2"
-  local user_email="$3"
+  local user_email
+  if [ -n "$3" ]; then
+    user_email="$3"
+  else
+    user_email="${user_name}@users.noreply.github.com"
+  fi
 
   git config user.name "$user_name"
   git config user.email "$user_email"
