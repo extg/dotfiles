@@ -110,7 +110,7 @@ function gconf() {
   git config user.email "$user_email"
   git config core.sshCommand "ssh -i $ssh_key_path -o IdentitiesOnly=yes"
 
-  echo "\nGit local config set:"
+  printf "\nGit local config set:\n"
   git config --get user.name
   git config --get user.email
   git config --get core.sshCommand
