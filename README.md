@@ -101,3 +101,4 @@ For detailed setup instructions on each component, see the [recipe collection](r
 - [thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles)
 - [Nikita Sobolev's dotfiles](https://github.com/sobolevn/dotfiles)
 - [OleksandrKucherenko's Mac setup script](https://gist.github.com/OleksandrKucherenko/e76220f22359e0e49c81c5474b1457a1)
+- [Modern Developer Terminal Setup on macOS (2025 Edition)](https://blog.stackademic.com/modern-developer-terminal-setup-on-macos-2025-edition-748e19f0b753)
