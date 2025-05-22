@@ -5,7 +5,7 @@
 Set default Node version:
 
 ```sh
-nvm install v12
+nvm install v24
 ```
 
 ## Terminal Setup
