@@ -6,7 +6,7 @@ brew bundle
 
 # Run macOS defaults
 echo "Applying macOS defaults..."
-./macos
+./.macos
 
 # Set default applications
 echo "Setting default applications..."
