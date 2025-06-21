@@ -4,8 +4,6 @@ function doIt() {
 	if shellcheck --exclude=SC2139,SC1090 .functions .aliases sync-dotfiles.sh; then
 		echo "Shellcheck: ok!"
 
-    rm -rf ~/.oh-my-zsh-aliases
-
 		rsync -avh --no-perms \
 			.aliases \
       .oh-my-zsh-aliases \
