@@ -21,4 +21,5 @@ defaults write com.googlecode.iterm2 AlternateMouseScroll -bool true
 mkdir -p "$HOME/Screenshots"
 defaults write com.apple.screencapture location "$HOME/Screenshots"
 defaults write com.apple.screencapture type -string jpg
+defaults write com.apple.iphonesimulator ScreenshotSaveLocation -string "$HOME/Screenshots"
 killall SystemUIServer
