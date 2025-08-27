@@ -21,3 +21,9 @@ jsconfig.json
 ~*
 
 .eslintcache
+
+# Playwright
+.playwright-mcp/
+
+# Node
+node_modules/
