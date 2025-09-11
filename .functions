@@ -120,3 +120,27 @@ function gconf() {
   printf "user.email:      %s\n" "$(git config --get user.email)"
   printf "core.sshCommand: %s\n" "$(git config --get core.sshCommand)"
 }
+
+# Base64 encode a string or file
+# Usage: b64encode "string" or b64encode < file.txt or echo "string" | b64encode
+function b64encode() {
+  if [ $# -eq 0 ]; then
+    # Read from stdin if no arguments provided
+    base64
+  else
+    # Encode the provided string
+    printf '%s' "$1" | base64
+  fi
+}
+
+# Base64 decode a string or file
+# Usage: b64decode "encoded_string" or b64decode < encoded_file.txt or echo "encoded_string" | b64decode
+function b64decode() {
+  if [ $# -eq 0 ]; then
+    # Read from stdin if no arguments provided
+    base64 -d
+  else
+    # Decode the provided string
+    printf '%s' "$1" | base64 -d
+  fi
+}
