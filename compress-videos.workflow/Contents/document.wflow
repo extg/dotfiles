@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>512</string>
+	<string>528</string>
 	<key>AMApplicationVersion</key>
 	<string>2.10</string>
 	<key>AMDocumentVersion</key>
@@ -60,12 +60,34 @@
 				<dict>
 					<key>COMMAND_STRING</key>
 					<string>for f in "$@"; do
-  echo $f &gt;&gt; out.txt
+  echo "Triggered: $f at $(date)" &gt;&gt; "$HOME/compress-video.log"
+
   if [[ $f == *.mov ]]; then
-    echo "if$f" &gt;&gt; out.txt
-    /usr/local/bin/HandBrakeCLI -Z "Fast 1080p30" -i "$f" -o "${f%.mov}.mp4" &amp;&gt;&gt; out.txt;
+    out="${f%.mov}.mp4"
+    echo "Processing: $f -&gt; $out" &gt;&gt; "$HOME/compress-video.log"
+
+    /opt/homebrew/bin/ffmpeg -i "$f" -vcodec libx264 -crf 23 -preset fast -acodec aac "$out" &amp;&gt;&gt; "$HOME/compress-video.log"
+
+    if [[ -s "$out" ]]; then
+      echo "✅ Compression finished: $out" &gt;&gt; "$HOME/compress-video.log"
+      rm -f "$f"
+      echo "Original deleted: $f" &gt;&gt; "$HOME/compress-video.log"
+
+      /opt/homebrew/bin/terminal-notifier \
+        -title "Compress Videos" \
+        -message "Compression finished: $(basename "$out")"
+    else
+      echo "❌ Compression failed: $f" &gt;&gt; "$HOME/compress-video.log"
+
+      /opt/homebrew/bin/terminal-notifier \
+        -title "Compress Videos" \
+        -message "Compression failed: $(basename "$f")"
+    fi
+
+    echo "" &gt;&gt; "$HOME/compress-video.log"
   fi
-done</string>
+done
+</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -177,12 +199,10 @@ done</string>
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>309.000000:432.000000</string>
+				<string>309.000000:308.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>

@@ -23,3 +23,11 @@ defaults write com.apple.screencapture location "$HOME/Screenshots"
 defaults write com.apple.screencapture type -string jpg
 defaults write com.apple.iphonesimulator ScreenshotSaveLocation -string "$HOME/Screenshots"
 killall SystemUIServer
+
+# Copy the workflow to the system's Folder Actions directory where Automator saves workflows by default
+# This makes it available in Folder Actions Setup for attaching to folders
+mkdir -p "$HOME/Library/Workflows/Applications/Folder Actions/"
+cp -R "$(dirname "$0")/compress-videos.workflow" "$HOME/Library/Workflows/Applications/Folder Actions/"
+# Restart Folder Actions to pick up the new workflow
+killall "Folder Actions Setup" 2>/dev/null || true
+killall "System Events" 2>/dev/null || true

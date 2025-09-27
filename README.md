@@ -67,6 +67,17 @@ This repository contains my personal dotfiles and setup instructions for a new M
   ```
   For detailed instructions, see [PostgreSQL Setup](recipes/postgresql-setup.md)
 
+### 5. Compress Videos Workflow Setup
+The `compress-videos.workflow` is automatically installed to `~/Library/Workflows/Applications/Folder Actions/` during the macOS setup process. To enable automatic video compression:
+
+1. Open **Folder Actions Setup** (found in Applications → Utilities or search in Spotlight)
+2. Click the "+" button to add a folder
+3. Select your `~/Screenshots` folder (or any folder where you want videos to be automatically compressed)
+4. Choose the `compress-videos` workflow from the list
+5. The workflow will now automatically compress any videos added to that folder
+
+**Note for developers**: After making changes to the workflow in Automator, you need to export it back to the dotfiles repository to keep it in sync. The workflow file is located at `compress-videos.workflow` in the repository root.
+
 
 ## Working with Dotfiles
 
