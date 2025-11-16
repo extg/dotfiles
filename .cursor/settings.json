@@ -1,0 +1,142 @@
+{
+  // ux
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "extensions.ignoreRecommendations": true,
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.list.openMode": "doubleClick",
+  "workbench.tree.expandMode": "doubleClick",
+  "window.newWindowDimensions": "maximized",
+  // preview settings
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor",
+    "*.svg": "default"
+  },
+  // behavior
+  "explorer.confirmDragAndDrop": false,
+  // ui
+  "workbench.tree.indent": 16,
+  "workbench.editor.showTabs": "single",
+  "workbench.colorCustomizations": {
+    // enable only with default theme
+    // "statusBar.background" : "#2A2A29",
+    // "statusBar.noFolderBackground" : "#212121",
+    // "statusBar.debuggingBackground": "#263238",
+    // "statusBarItem.remoteBackground": "#2A2A29",
+    // "statusBarItem.remoteForeground": "#ccc",
+  },
+  "workbench.colorTheme": "Bearded Theme Anthracite",
+  "explorer.confirmDelete": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "emmet.excludeLanguages": ["markdown"],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.tabSize": 2,
+  "editor.stickyTabStops": true,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "у": true
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.autoIndent": "keep",
+  "editor.inlineSuggest.enabled": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.stickyScroll.enabled": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.suggest.matchOnWordStartOnly": false,
+  "window.dialogStyle": "custom",
+  "editor.insertSpaces": true,
+  "[yaml]": {
+    "editor.insertSpaces": true
+  },
+  "editor.detectIndentation": false,
+  "[css]": {
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[*]": {
+    "editor.insertSpaces": true
+  },
+  "editor.wordWrap": "on",
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "totalTypeScript.hideAllTips": false,
+  "totalTypeScript.hideBasicTips": true,
+  "totalTypeScript.hiddenTips": [
+    "non-null-expression",
+    "passing-generics-to-types",
+    "typeof",
+    "keyof",
+    "as-const",
+    "type-alias-with-generics",
+    "conditional-type",
+    "never-keyword",
+    "generic-slots-in-functions",
+    "multiple-generic-slots-in-functions",
+    "in-operator-narrowing",
+    "omit-utility-type",
+    "interface-with-generics",
+    "record-utility-type",
+    "as-const-on-object",
+    "pick-utility-type",
+    "infer",
+    "returntype-utility-type",
+    "partial-utility-type",
+    "type-predicate",
+    "tuple-type",
+    "exclude-utility-type",
+    "type-alias-with-multiple-generics",
+    "interface-with-multiple-generics",
+    "parameters-utility-type",
+    "awaited-utility-type",
+    "mapped-type",
+    "nested-conditional-type",
+    "bigint"
+  ],
+  "reactSnippets.settings.prettierEnabled": true,
+  "prettier.printWidth": 100,
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": false,
+  "editor.largeFileOptimizations": false,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "editor.minimap.enabled": true,
+  "security.promptForLocalFileProtocolHandling": false,
+  "npm.packageManager": "auto",
+  "git.autofetch": true,
+  "cursor.composer.shouldAllowCustomModes": true,
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.windowSwitcher.sidebarHoverCollapsed": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "git.openRepositoryInParentFolders": "always",
+  "workbench.editor.autoLockGroups": {
+    "default": true,
+    "repl": true,
+    "imagePreview.previewEditor": true,
+    "vscode.audioPreview": true,
+    "vscode.videoPreview": true,
+    "gitlens.rebase": true
+  },
+  "gitlens.launchpad.indicator.enabled": false,
+  "gitlens.ai.model": "gitkraken",
+  "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash"
+}
