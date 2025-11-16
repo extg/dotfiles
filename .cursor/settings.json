@@ -18,6 +18,12 @@
   },
   // behavior
   "explorer.confirmDragAndDrop": false,
+  "editor.autoIndent": "keep",
+  "editor.inlineSuggest.enabled": true,
+  "editor.tabSize": 2,
+  "editor.stickyTabStops": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
   // ui
   "workbench.tree.indent": 16,
   "workbench.editor.showTabs": "single",
@@ -31,21 +37,15 @@
   },
   "workbench.colorTheme": "Bearded Theme Anthracite",
   "explorer.confirmDelete": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.updateImportsOnFileMove.enabled": "always",
   "emmet.excludeLanguages": ["markdown"],
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "editor.tabSize": 2,
-  "editor.stickyTabStops": true,
   "editor.unicodeHighlight.allowedCharacters": {
     "у": true
   },
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "security.workspace.trust.untrustedFiles": "open",
-  "editor.autoIndent": "keep",
-  "editor.inlineSuggest.enabled": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

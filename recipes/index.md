@@ -15,7 +15,7 @@ This directory contains modular setup instructions for various aspects of macOS 
 - [PostgreSQL Setup](postgresql-setup.md) - Set up PostgreSQL 15 with Homebrew
 - [SSH Key Generation](ssh-keygen.md) - Create and manage SSH keys
 - [Zsh Loading Order](zsh-loading-order.md) - Understand shell configuration loading
-- [Cursor App Signature Fix](cursor-signature-fix.md) - Fix signature validation errors
+- [Cursor Setup & Configuration](cursor-setup.md) - Settings sync and troubleshooting
 
 ## Reference
 
