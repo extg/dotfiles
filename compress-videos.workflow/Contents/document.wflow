@@ -65,9 +65,9 @@
   if [[ $f == *.mov ]]; then
     out="${f%.mov}.mp4"
     echo "Processing: $f -&gt; $out" &gt;&gt; "$HOME/compress-video.log"
-    echo "/opt/homebrew/bin/ffmpeg -i $f -vf scale=1280:-2 -c:v h264_videotoolbox -q:v 70 -c:a copy $out" &gt;&gt; "$HOME/compress-video.log"
+    echo "/opt/homebrew/bin/ffmpeg -hwaccel videotoolbox -i $f -vf scale=960:-2 -c:v h264_videotoolbox -q:v 80 -c:a copy $out" &gt;&gt; "$HOME/compress-video.log"
 
-    /opt/homebrew/bin/ffmpeg -i "$f" -vf scale=1280:-2 -c:v h264_videotoolbox -q:v 70 -c:a copy "$out" &amp;&gt;&gt; "$HOME/compress-video.log"
+    /opt/homebrew/bin/ffmpeg -hwaccel videotoolbox -i "$f" -vf scale=960:-2 -c:v h264_videotoolbox -q:v 80 -c:a copy "$out" &amp;&gt;&gt; "$HOME/compress-video.log"
 
     if [[ -s "$out" ]]; then
       echo "✅ Compression finished: $out" &gt;&gt; "$HOME/compress-video.log"
