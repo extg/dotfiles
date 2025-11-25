@@ -13,7 +13,7 @@
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "workbench.editorAssociations": {
-    "*.md": "vscode.markdown.preview.editor",
+    // "*.md": "vscode.markdown.preview.editor",
     "*.svg": "default"
   },
   // behavior
@@ -138,5 +138,6 @@
   },
   "gitlens.launchpad.indicator.enabled": false,
   "gitlens.ai.model": "gitkraken",
-  "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash"
+  "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
+  "explorer.confirmPasteNative": false
 }

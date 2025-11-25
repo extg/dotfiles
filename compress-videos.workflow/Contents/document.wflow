@@ -65,8 +65,9 @@
   if [[ $f == *.mov ]]; then
     out="${f%.mov}.mp4"
     echo "Processing: $f -&gt; $out" &gt;&gt; "$HOME/compress-video.log"
+    echo "/opt/homebrew/bin/ffmpeg -i $f -vf scale=1280:-2 -c:v h264_videotoolbox -q:v 70 -c:a copy $out" &gt;&gt; "$HOME/compress-video.log"
 
-    /opt/homebrew/bin/ffmpeg -i "$f" -vcodec libx264 -crf 23 -preset fast -acodec aac "$out" &amp;&gt;&gt; "$HOME/compress-video.log"
+    /opt/homebrew/bin/ffmpeg -i "$f" -vf scale=1280:-2 -c:v h264_videotoolbox -q:v 70 -c:a copy "$out" &amp;&gt;&gt; "$HOME/compress-video.log"
 
     if [[ -s "$out" ]]; then
       echo "✅ Compression finished: $out" &gt;&gt; "$HOME/compress-video.log"
@@ -202,7 +203,7 @@ done
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>309.000000:308.000000</string>
+				<string>520.500000:252.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
