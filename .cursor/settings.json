@@ -28,14 +28,10 @@
   "workbench.tree.indent": 16,
   "workbench.editor.showTabs": "single",
   "workbench.colorCustomizations": {
-    // enable only with default theme
-    // "statusBar.background" : "#2A2A29",
-    // "statusBar.noFolderBackground" : "#212121",
-    // "statusBar.debuggingBackground": "#263238",
-    // "statusBarItem.remoteBackground": "#2A2A29",
-    // "statusBarItem.remoteForeground": "#ccc",
+    "statusBarItem.remoteBackground": "#121418",
+    "statusBarItem.remoteForeground": "#59606A"
   },
-  "workbench.colorTheme": "Bearded Theme Anthracite",
+  "workbench.colorTheme": "Bearded Theme Black & Gold",
   "explorer.confirmDelete": false,
   "emmet.excludeLanguages": ["markdown"],
   "emmet.includeLanguages": {
@@ -139,5 +135,13 @@
   "gitlens.launchpad.indicator.enabled": false,
   "gitlens.ai.model": "gitkraken",
   "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
-  "explorer.confirmPasteNative": false
+  "explorer.confirmPasteNative": false,
+  "window.commandCenter": true,
+  "cursor.composer.queueMessageDefaultBehavior": "send",
+  "cursor.inlineDiff.mode": "unified",
+  "update.releaseTrack": "prerelease",
+  "window.newWindowProfile": "Default",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }

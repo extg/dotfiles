@@ -1,0 +1,140 @@
+[
+  // последние файлы под палец
+  {
+    "key": "cmd+e",
+    "command": "-actions.findWithSelection"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "workbench.action.showCommands",
+    "when": "editorTextFocus"
+  },
+  // Мультикурсор 
+  {
+    "key": "cmd+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  // Дублировать строчки и выделение
+  {
+    "key": "shift+cmd+d",
+    "command": "geeebe.duplicateText",
+    "when": "editorTextFocus"
+  },
+  // Удалить строчку полностью
+  {
+    "key": "cmd+backspace",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // Сразу создать файл когда в навигации папка в фокусе
+  {
+    "key": "cmd+n",
+    "command": "explorer.newFile",
+    "when": "explorerResourceIsFolder"
+  },
+  // Перенос строк стрелками
+  {
+    "key": "shift+cmd+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // lowercase / uppercase
+  {
+    "key": "cmd+shift+u",
+    "command": "editor.action.transformToUppercase",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+shift+l",
+    "command": "editor.action.transformToLowercase",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+cmd+u",
+    "command": "-workbench.action.output.toggleOutput"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "-editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  // search and replace
+  {
+    "key": "shift+cmd+r",
+    "command": "workbench.action.replaceInFiles"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "-workbench.action.replaceInFiles"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "filesExplorer.findInFolder",
+    "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  // искать в выбранной папке
+  {
+    "key": "shift+cmd+f",
+    "command": "filesExplorer.findInFolder",
+    "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  // заменить в выбранной папке
+  {
+    "key": "shift+cmd+r",
+    "command": "workbench.action.replaceInFiles"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "-composer.openAsBar"
+  },
+  {
+    "key": "cmd+n",
+    "command": "composer.createNew",
+    "when": "focusedView == 'workbench.panel.composerViewPane2.view'"
+  },
+  {
+    "key": "cmd+n",
+    "command": "-composer.createNew",
+    "when": "focusedView == 'workbench.panel.composerViewPane2.view'"
+  },
+  {
+    "key": "cmd+k",
+    "command": "composer.createNew"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\\\r\n"
+    },
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
+  }
+]
