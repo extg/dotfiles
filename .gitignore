@@ -15,7 +15,7 @@ Thumbs.db
 
 # Directories used by the IDE to store settings and caches
 .idea
-.vscode
+.cursor
 jsconfig.json
 
 ~*

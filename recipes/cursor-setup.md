@@ -1,36 +1,57 @@
-# Cursor Configuration & Troubleshooting
+# VS Code & Cursor Configuration
 
-This guide covers Cursor app configuration management and common troubleshooting steps.
+This guide covers VS Code and Cursor configuration management and troubleshooting steps.
 
 ## Settings Synchronization
 
-To keep your Cursor settings synchronized across machines using your dotfiles repository:
+Settings are stored in the `vscode/` directory and can be synced to both VS Code and Cursor.
 
-### 1. Remove existing settings file
+### Quick Setup
+
+Run the sync script to automatically create symbolic links:
+
 ```bash
-rm ~/Library/Application\ Support/Cursor/User/settings.json
-rm ~/Library/Application\ Support/Cursor/User/keybindings.json
+cd ~/Workspaces/dotfiles
+./sync-vscode-settings.sh
 ```
 
-### 2. Create symbolic link to repository
+This script will:
+- Create symbolic links from VS Code/Cursor config directories to `vscode/` folder in dotfiles
+- Backup existing files if needed
+- Work with both VS Code and Cursor simultaneously
+- Support VS Code Insiders
+
+### Manual Setup
+
+If you prefer to set up links manually:
+
+#### For Cursor:
 ```bash
-ln -s ~/Workspaces/dotfiles/.cursor/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
-ln -s ~/Workspaces/dotfiles/.cursor/keybindings.json ~/Library/Application\ Support/Cursor/User/keybindings.json
+ln -s ~/Workspaces/dotfiles/vscode/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
+ln -s ~/Workspaces/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Cursor/User/keybindings.json
 ```
+
+#### For VS Code:
+```bash
+ln -s ~/Workspaces/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/Workspaces/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+```
+
+### Benefits
 
 This approach allows you to:
 - Store settings in your dotfiles repository for version control
 - Sync settings across multiple machines
-- Keep Cursor thinking the settings are in the standard location
-- Make changes through Cursor's UI that automatically update your repository
+- Keep identical settings between VS Code and Cursor
+- Make changes through editor UI that automatically update your repository
 
-**Note**: Make sure to commit and push changes to your `.cursor/settings.json` file to keep settings synchronized across machines.
+**Note**: Make sure to commit and push changes to your `vscode/` files to keep settings synchronized across machines.
 
 ## Extensions Management
 
 ### Installing Extensions
 
-To install all extensions from `.cursor/extensions.txt`:
+To install all extensions from `vscode/extensions.txt`:
 
 ```bash
 cd ~/Workspaces/dotfiles
@@ -38,13 +59,13 @@ cd ~/Workspaces/dotfiles
 ```
 
 This will:
-- Install all extensions listed in `.cursor/extensions.txt`
+- Install all extensions listed in `vscode/extensions.txt`
 - Skip extensions that are already installed
 - Show progress and summary
 
 ### Syncing Extensions
 
-To synchronize installed extensions with `.cursor/extensions.txt` (install missing, remove extra):
+To synchronize installed extensions with `vscode/extensions.txt` (install missing, remove extra):
 
 ```bash
 cd ~/Workspaces/dotfiles
@@ -62,10 +83,16 @@ Make sure the `cursor` command is available in your PATH. If not:
 
 ### Updating Extensions List
 
-To update `.cursor/extensions.txt` with currently installed extensions:
+To update `vscode/extensions.txt` with currently installed extensions:
 
 ```bash
-cursor --list-extensions > ~/Workspaces/dotfiles/.cursor/extensions.txt
+cursor --list-extensions > ~/Workspaces/dotfiles/vscode/extensions.txt
+```
+
+Or for VS Code:
+
+```bash
+code --list-extensions > ~/Workspaces/dotfiles/vscode/extensions.txt
 ```
 
 Then review and commit the changes.
