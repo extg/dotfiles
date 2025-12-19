@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
+
+cd "$DOTFILES_DIR"
+
 # Install Homebrew packages
 echo "Installing Homebrew packages..."
 brew bundle
@@ -10,10 +15,10 @@ echo "Applying macOS defaults..."
 
 # Set default applications
 echo "Setting default applications..."
-./apply-default-apps.sh
+./scripts/apply-default-apps.sh
 
 # Sync dotfiles to home directory
 echo "Syncing dotfiles to home directory..."
-./sync-dotfiles.sh
+./scripts/sync-dotfiles.sh
 
 echo "Initialization complete!" 

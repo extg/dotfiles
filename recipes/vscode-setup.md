@@ -12,7 +12,7 @@ Run the sync script to automatically create symbolic links:
 
 ```bash
 cd ~/Workspaces/dotfiles
-./sync-vscode-settings.sh
+./scripts/sync-vscode-settings.sh
 ```
 
 This script will:
@@ -55,7 +55,7 @@ To install all extensions from `vscode/extensions.txt`:
 
 ```bash
 cd ~/Workspaces/dotfiles
-./install-cursor-extensions.sh
+./scripts/install-cursor-extensions.sh
 ```
 
 This will:
@@ -69,7 +69,7 @@ To synchronize installed extensions with `vscode/extensions.txt` (install missin
 
 ```bash
 cd ~/Workspaces/dotfiles
-./install-cursor-extensions.sh --sync
+./scripts/install-cursor-extensions.sh --sync
 ```
 
 **Note**: Sync mode will remove extensions that are not in `extensions.txt` (except built-in VS Code extensions).

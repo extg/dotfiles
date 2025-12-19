@@ -5,7 +5,8 @@
 
 set -e
 
-DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
 VSCODE_DIR="$DOTFILES_DIR/vscode"
 
 # Цвета для вывода

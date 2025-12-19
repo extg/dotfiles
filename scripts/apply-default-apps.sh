@@ -3,7 +3,10 @@
 # Script to apply default application settings from an export file
 # Usage: ./apply-default-apps.sh [input_file]
 
-INPUT_FILE=${1:-"default-apps.txt"}
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
+
+INPUT_FILE=${1:-"$DOTFILES_DIR/default-apps.txt"}
 
 if [ ! -f "$INPUT_FILE" ]; then
   echo "Error: Input file $INPUT_FILE not found."
