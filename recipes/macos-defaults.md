@@ -41,7 +41,7 @@ defaults delete com.apple.dock; killall Dock
 Run the custom defaults script:
 
 ```sh
-bash .macos
+bash home/.macos
 ```
 
 ## Keyboard Shortcuts
