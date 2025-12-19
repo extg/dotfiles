@@ -139,9 +139,9 @@
   "window.commandCenter": true,
   "cursor.composer.queueMessageDefaultBehavior": "send",
   "cursor.inlineDiff.mode": "unified",
-  "update.releaseTrack": "prerelease",
   "window.newWindowProfile": "Default",
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "diffEditor.renderSideBySide": false
 }
