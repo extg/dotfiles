@@ -31,7 +31,6 @@
     "statusBarItem.remoteBackground": "#121418",
     "statusBarItem.remoteForeground": "#59606A"
   },
-  "workbench.colorTheme": "Bearded Theme Black & Gold",
   "explorer.confirmDelete": false,
   "emmet.excludeLanguages": ["markdown"],
   "emmet.includeLanguages": {
@@ -143,5 +142,6 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "diffEditor.renderSideBySide": false
+  "diffEditor.renderSideBySide": false,
+  "workbench.colorTheme": "Bearded Theme Anthracite"
 }
