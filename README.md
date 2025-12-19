@@ -72,7 +72,7 @@ This repository contains my personal dotfiles and setup instructions for a new M
   ./sync-vscode-settings.sh
   ```
   This will create symbolic links for settings, keybindings, and extensions between your dotfiles and both VS Code and Cursor.
-  For detailed instructions, see [VS Code & Cursor Setup](recipes/cursor-setup.md)
+  For detailed instructions, see [VS Code & Cursor Setup](recipes/vscode-setup.md)
 
 ### 5. Compress Videos Workflow Setup
 The `compress-videos.workflow` is automatically installed to `~/Library/Workflows/Applications/Folder Actions/` during the macOS setup process. To enable automatic video compression:
