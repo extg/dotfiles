@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-# Install Cursor extensions from .cursor/extensions.txt
+# Install Cursor extensions from vscode/extensions.txt
 # Usage: ./install-cursor-extensions.sh [--sync]
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-EXTENSIONS_FILE="${SCRIPT_DIR}/.cursor/extensions.txt"
+EXTENSIONS_FILE="${SCRIPT_DIR}/vscode/extensions.txt"
 
 if [ ! -f "$EXTENSIONS_FILE" ]; then
 	echo "Error: Extensions file not found at $EXTENSIONS_FILE"

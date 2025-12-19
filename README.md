@@ -67,12 +67,12 @@ This repository contains my personal dotfiles and setup instructions for a new M
   ```
   For detailed instructions, see [PostgreSQL Setup](recipes/postgresql-setup.md)
 
-- Configure Cursor settings synchronization:
+- Configure VS Code/Cursor settings synchronization:
   ```sh
-  rm ~/Library/Application\ Support/Cursor/User/settings.json
-  ln -s ~/Workspaces/dotfiles/.cursor/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
+  ./sync-vscode-settings.sh
   ```
-  For detailed instructions, see [Cursor Setup & Configuration](recipes/cursor-setup.md)
+  This will create symbolic links for settings, keybindings, and extensions between your dotfiles and both VS Code and Cursor.
+  For detailed instructions, see [VS Code & Cursor Setup](recipes/cursor-setup.md)
 
 ### 5. Compress Videos Workflow Setup
 The `compress-videos.workflow` is automatically installed to `~/Library/Workflows/Applications/Folder Actions/` during the macOS setup process. To enable automatic video compression:
