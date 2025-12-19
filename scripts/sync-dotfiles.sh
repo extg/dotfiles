@@ -2,20 +2,20 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
+HOME_DIR="$DOTFILES_DIR/home"
 
 function doIt() {
-	cd "$DOTFILES_DIR"
+	cd "$HOME_DIR" || exit
 	
-	if shellcheck --exclude=SC2139,SC1090 .functions .aliases scripts/sync-dotfiles.sh; then
+	if shellcheck --exclude=SC2139,SC1090,SC2164 .functions .aliases ../scripts/sync-dotfiles.sh; then
 		echo "Shellcheck: ok!"
 
 		rsync -avh --no-perms \
 			.aliases \
-			.oh-my-zsh-aliases \
 			.editorconfig \
 			.functions \
 			.gitconfig \
-			.gitignore \
+			.macos \
 			.prettierrc \
 			.vimrc \
 			.zshrc \

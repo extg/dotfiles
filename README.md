@@ -89,7 +89,7 @@ The `compress-videos.workflow` is automatically installed to `~/Library/Workflow
 ## Working with Dotfiles
 
 ### Making Changes
-- Edit dotfiles in the repository (`~/Workspaces/dotfiles`)
+- Edit dotfiles in the repository (`~/Workspaces/dotfiles/home/`)
 - Ensure to update `scripts/sync-dotfiles.sh` to include the new file in the rsync command while adding **new dotfiles**
 - Run `./scripts/sync-dotfiles.sh` to apply changes to your home directory
 - Commit and push changes to keep your repository up to date
