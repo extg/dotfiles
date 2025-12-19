@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
+
 function doIt() {
-	if shellcheck --exclude=SC2139,SC1090 .functions .aliases sync-dotfiles.sh; then
+	cd "$DOTFILES_DIR"
+	
+	if shellcheck --exclude=SC2139,SC1090 .functions .aliases scripts/sync-dotfiles.sh; then
 		echo "Shellcheck: ok!"
 
 		rsync -avh --no-perms \
 			.aliases \
-      .oh-my-zsh-aliases \
+			.oh-my-zsh-aliases \
 			.editorconfig \
 			.functions \
 			.gitconfig \

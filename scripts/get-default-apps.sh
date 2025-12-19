@@ -3,7 +3,10 @@
 # Script to export current default app associations to a file
 # Usage: ./get-default-apps.sh [output_file]
 
-OUTPUT_FILE=${1:-"default-apps.txt"}
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
+
+OUTPUT_FILE=${1:-"$DOTFILES_DIR/default-apps.txt"}
 
 # Get all UTIs with their handlers
 echo "# Default application settings exported on $(date)" > "$OUTPUT_FILE"

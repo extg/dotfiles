@@ -4,7 +4,8 @@
 # Usage: ./install-cursor-extensions.sh [--sync]
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-EXTENSIONS_FILE="${SCRIPT_DIR}/vscode/extensions.txt"
+DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
+EXTENSIONS_FILE="${DOTFILES_DIR}/vscode/extensions.txt"
 
 if [ ! -f "$EXTENSIONS_FILE" ]; then
 	echo "Error: Extensions file not found at $EXTENSIONS_FILE"

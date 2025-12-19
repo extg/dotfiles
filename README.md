@@ -26,7 +26,7 @@ This repository contains my personal dotfiles and setup instructions for a new M
   ```
 - Run the initialization script to set up everything at once:
   ```sh
-  ./init.sh
+  ./scripts/init.sh
   ```
   This will:
   - Install applications from Brewfile
@@ -50,7 +50,7 @@ This repository contains my personal dotfiles and setup instructions for a new M
   ```
 - Run the dotfiles sync script to update your `.zshrc` with Oh My Zsh plugins and Starship prompt:
   ```sh
-  ./sync-dotfiles.sh
+  ./scripts/sync-dotfiles.sh
   ```
 - Reload shell settings:
   ```sh
@@ -69,7 +69,7 @@ This repository contains my personal dotfiles and setup instructions for a new M
 
 - Configure VS Code/Cursor settings synchronization:
   ```sh
-  ./sync-vscode-settings.sh
+  ./scripts/sync-vscode-settings.sh
   ```
   This will create symbolic links for settings, keybindings, and extensions between your dotfiles and both VS Code and Cursor.
   For detailed instructions, see [VS Code & Cursor Setup](recipes/vscode-setup.md)
@@ -90,8 +90,8 @@ The `compress-videos.workflow` is automatically installed to `~/Library/Workflow
 
 ### Making Changes
 - Edit dotfiles in the repository (`~/Workspaces/dotfiles`)
-- Ensure to update `sync-dotfiles.sh` to include the new file in the rsync command while adding **new dotfiles**
-- Run `./sync-dotfiles.sh` to apply changes to your home directory
+- Ensure to update `scripts/sync-dotfiles.sh` to include the new file in the rsync command while adding **new dotfiles**
+- Run `./scripts/sync-dotfiles.sh` to apply changes to your home directory
 - Commit and push changes to keep your repository up to date
 
 ### Updating Brewfile

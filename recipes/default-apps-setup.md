@@ -6,10 +6,10 @@ You can export your current default application settings to a file and then impo
 
 ```sh
 # Export default app settings to a file (default: default-apps.txt)
-./get-default-apps.sh [output_file]
+./scripts/get-default-apps.sh [output_file]
 
 # Apply exported settings on a new system
-./apply-default-apps.sh [input_file]
+./scripts/apply-default-apps.sh [input_file]
 ```
 
 This works similar to Brewfile for Homebrew, allowing you to transfer your default application settings between systems. 
