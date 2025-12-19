@@ -1,5 +1,5 @@
 [
-  // последние файлы под палец
+  // Quick open recent files
   {
     "key": "cmd+e",
     "command": "-actions.findWithSelection"
@@ -13,31 +13,31 @@
     "command": "workbench.action.showCommands",
     "when": "editorTextFocus"
   },
-  // Мультикурсор 
+  // Multi-cursor
   {
     "key": "cmd+d",
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
   },
-  // Дублировать строчки и выделение
+  // Duplicate lines and selection
   {
     "key": "shift+cmd+d",
     "command": "geeebe.duplicateText",
     "when": "editorTextFocus"
   },
-  // Удалить строчку полностью
+  // Delete entire line
   {
     "key": "cmd+backspace",
     "command": "editor.action.deleteLines",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // Сразу создать файл когда в навигации папка в фокусе
+  // Create file when folder is focused in explorer
   {
     "key": "cmd+n",
     "command": "explorer.newFile",
     "when": "explorerResourceIsFolder"
   },
-  // Перенос строк стрелками
+  // Move lines with arrows
   {
     "key": "shift+cmd+down",
     "command": "editor.action.moveLinesDownAction",
@@ -92,13 +92,13 @@
     "command": "filesExplorer.findInFolder",
     "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
-  // искать в выбранной папке
+  // Find in selected folder
   {
     "key": "shift+cmd+f",
     "command": "filesExplorer.findInFolder",
     "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
-  // заменить в выбранной папке
+  // Replace in selected folder
   {
     "key": "shift+cmd+r",
     "command": "workbench.action.replaceInFiles"
