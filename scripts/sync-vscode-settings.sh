@@ -108,6 +108,16 @@ for file in "${FILES[@]}"; do
     skip_count=$((skip_count + 1))
   fi
 done
+
+# Special case: also link mcp.json to ~/.cursor/mcp.json
+if [ -f "$VSCODE_DIR/mcp.json" ]; then
+  total_operations=$((total_operations + 1))
+  if create_symlink "$VSCODE_DIR/mcp.json" "$HOME/.cursor/mcp.json" "Cursor"; then
+    success_count=$((success_count + 1))
+  else
+    skip_count=$((skip_count + 1))
+  fi
+fi
 echo ""
 
 # Sync for VS Code
