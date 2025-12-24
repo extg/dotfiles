@@ -143,5 +143,11 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "diffEditor.renderSideBySide": false,
-  "workbench.colorTheme": "Bearded Theme Anthracite"
+  "workbench.colorTheme": "Bearded Theme Anthracite",
+  "kilo-code.allowedCommands": [
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "kilo-code.deniedCommands": []
 }
