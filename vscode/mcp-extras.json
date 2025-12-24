@@ -1,0 +1,47 @@
+{
+  "mcpServers": {
+    "figma": {
+      "url": "http://127.0.0.1:3845/mcp"
+    },
+    "context7": {
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "firecrawl": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "firecrawl-mcp"
+      ],
+      "env": {
+        "FIRECRAWL_API_URL": "http://localhost:3002",
+        "FIRECRAWL_API_KEY": "*"
+      }
+    },
+    "rube": {
+      "url": "https://rube.composio.dev/mcp?agent=cursor",
+      "headers": {}
+    },
+    "Neon": {
+      "type": "http",
+      "url": "https://mcp.neon.tech/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:NEON_API_KEY}"
+      }
+    },
+    "clickup": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.clickup.com/mcp"
+      ]
+    },
+    "fireflies": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://api.fireflies.ai/mcp"
+      ]
+    }
+  }
+}
