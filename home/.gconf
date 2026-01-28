@@ -4,6 +4,7 @@
 #
 # Usage:
 #   gconf apply|a  <username>
+#   gconf show|s   — effective (resolved) config, excluding branch.*
 #   gconf create|c <username> [email] [ssh_key] [gpg_key]
 #   (email defaults to username@users.noreply.github.com)
 #
@@ -17,14 +18,21 @@ function gconf() {
 
   case "$cmd" in
     apply|a)  _gconf_apply "$@" ;;
+    show|s)   _gconf_show ;;
     create|c) _gconf_create "$@" ;;
     *)
       echo "Usage:"
       echo "  gconf apply|a  <username>"
+      echo "  gconf show|s   — effective (resolved) config"
       echo "  gconf create|c <username> [email] [ssh_key] [gpg_key]"
       return 1
       ;;
   esac
+}
+
+function _gconf_show() {
+  printf "Effective git config (resolved, all levels):\n"
+  git config --list --show-origin | grep -v '^branch\.'
 }
 
 function _gconf_apply() {
