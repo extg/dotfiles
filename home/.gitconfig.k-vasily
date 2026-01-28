@@ -1,4 +1,11 @@
 [user]
+	name = k-vasily
+	email = krylov@vasily.dev
+
+[core]
+	sshCommand = ssh -i /Users/vasily/.ssh/github_k-vasily -o IdentitiesOnly=yes
+
+[user]
 	signingkey = FE108C69B5C6C93E
 
 [commit]
