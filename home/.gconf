@@ -45,7 +45,7 @@ function _gconf_apply() {
   git config include.path "$user_config_file"
 
   printf "\nGit local config set:\n"
-  git config --local --list
+  git config --local --list | grep -v '^branch\.'
 }
 
 function _gconf_create() {
