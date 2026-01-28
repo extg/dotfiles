@@ -7,13 +7,14 @@ HOME_DIR="$DOTFILES_DIR/home"
 function doIt() {
 	cd "$HOME_DIR" || exit
 	
-	if shellcheck --exclude=SC2139,SC1090,SC2164 .functions .aliases ../scripts/sync-dotfiles.sh; then
+	if shellcheck --exclude=SC2139,SC1090,SC2164 .functions .aliases .gconf ../scripts/sync-dotfiles.sh; then
 		echo "Shellcheck: ok!"
 
 		rsync -avh --no-perms \
 			.aliases \
 			.editorconfig \
 			.functions \
+			.gconf \
 			.gitconfig \
 			.macos \
 			.prettierrc \
