@@ -1,0 +1,6 @@
+[user]
+	name = extg
+	email = extg@users.noreply.github.com
+
+[core]
+	sshCommand = ssh -i /Users/vasily/.ssh/github_extg -o IdentitiesOnly=yes
