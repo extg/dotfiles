@@ -136,5 +136,9 @@
   {
     "key": "cmd+i",
     "command": "composerMode.agent"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.quickOpenTerm"
   }
 ]

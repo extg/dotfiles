@@ -1,7 +1,10 @@
 {
   "mcpServers": {
     "context7": {
-      "url": "https://mcp.context7.com/mcp"
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "${env:CONTEXT7_API_KEY}"
+      }
     },
     "firecrawl": {
       "command": "npx",
@@ -17,6 +20,40 @@
     "figma": {
       "url": "https://mcp.figma.com/mcp",
       "headers": {}
+    },
+    "better-auth": {
+      "url": "https://mcp.chonkie.ai/better-auth/better-auth-builder/mcp",
+      "headers": {}
+    },
+    "github": {
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer GITHUB_PAT_REDACTED",
+        "X-MCP-Toolsets": "repos,pull_requests,actions"
+      }
+    },
+    "tanstack": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://tanstack.com/api/mcp"
+      ],
+      "env": {
+        "MCP_HEADERS": "Authorization: Bearer ${env:TRIGGER_API_KEY}"
+      }
+    },
+    "rube": {
+      "url": "https://rube.app/mcp?agent=cursor",
+      "headers": {}
+    },
+    "fireflies": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://api.fireflies.ai/mcp",
+        "--header",
+        "Authorization: Bearer ${env:FIREFLIES_API_KEY}"
+      ]
     }
   }
 }
