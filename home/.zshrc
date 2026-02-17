@@ -17,7 +17,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME=""
 
 # Oh My Zsh plugins
-plugins=(git z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # Load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
@@ -27,6 +27,11 @@ if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
   autoload -Uz compinit
   compinit
+fi
+
+# Initialize zoxide (replaces cd with smarter version)
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init zsh --cmd cd)"
 fi
 
 # SSH agent configuration
