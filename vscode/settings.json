@@ -149,5 +149,12 @@
     "git diff",
     "git show"
   ],
-  "kilo-code.deniedCommands": []
+  "kilo-code.deniedCommands": [],
+  "claudeCode.preferredLocation": "sidebar",
+  "claudeCode.selectedModel": "opus",
+  "claudeCode.allowDangerouslySkipPermissions": true,
+  "claudeCode.initialPermissionMode": "bypassPermissions",
+  "claudeCode.respectGitIgnore": false,
+  "claudeCode.useTerminal": true,
+  "terminal.integrated.tabs.enabled": false
 }
