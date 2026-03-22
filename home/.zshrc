@@ -29,9 +29,28 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-# Initialize zoxide (replaces cd with smarter version)
-if command -v zoxide &> /dev/null; then
-  eval "$(zoxide init zsh --cmd cd)"
+# Sesh integration - Alt-s to open session manager
+if command -v sesh &> /dev/null; then
+  function sesh-sessions() {
+    {
+      exec </dev/tty
+      exec <&1
+      local session
+      session=$(sesh list -i | fzf \
+        --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ' \
+        --header '  ^a all ^t tmux ^x zoxide' \
+        --bind 'tab:down,btab:up' \
+        --bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list -i)' \
+        --bind 'ctrl-t:change-prompt(🪟  )+reload(sesh list -it)' \
+        --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list -iz)')
+      [[ -z "$session" ]] && return
+      sesh connect "$session"
+    }
+  }
+
+  zle -N sesh-sessions
+  bindkey '\es' sesh-sessions  # Option-s (Alt-s)
+  bindkey '^o' sesh-sessions   # Ctrl-o (альтернативный биндинг)
 fi
 
 # SSH agent configuration
@@ -100,3 +119,12 @@ export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 
 # Initialize starship prompt
 eval "$(starship init zsh)"
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# Initialize zoxide (must be at the end of .zshrc)
+if command -v zoxide &> /dev/null; then
+  export _ZO_DOCTOR=0
+  eval "$(zoxide init zsh --cmd cd)"
+fi
