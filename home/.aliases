@@ -64,7 +64,9 @@ alias sudo='sudo '
 # Get week number
 alias week='date +%V'
 
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+if [[ "$OSTYPE" == darwin* ]]; then
+  alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+fi
 
 # Alias for dates like in GNU Command Line in Linux (using Homebrew coreutils)
 # alias date='gdate'
@@ -78,14 +80,14 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 #
 #If you need to have postgresql@15 first in your PATH, run:
 #echo 'export PATH="/usr/local/opt/postgresql@15/bin:$PATH"' >> ~/.zshrc
-export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
-#For compilers to find postgresql@15 you may need to set:
-export LDFLAGS="-L/usr/local/opt/postgresql@15/lib"
-export CPPFLAGS="-I/usr/local/opt/postgresql@15/include"
-
-#For pkg-config to find postgresql@15 you may need to set:
-export PKG_CONFIG_PATH="/usr/local/opt/postgresql@15/lib/pkgconfig"
-
+if [[ "$OSTYPE" == darwin* ]]; then
+  export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
+  #For compilers to find postgresql@15 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/postgresql@15/lib"
+  export CPPFLAGS="-I/usr/local/opt/postgresql@15/include"
+  #For pkg-config to find postgresql@15 you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/postgresql@15/lib/pkgconfig"
+fi
 #To start postgresql@15 now and restart at login:
 #brew services start postgresql@15
 #Or, if you don't want/need a background service you can just run:

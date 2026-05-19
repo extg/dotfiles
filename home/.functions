@@ -6,22 +6,32 @@ function mkd() {
 }
 
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
-# opens the given location
-function s() {
-	if [ $# -eq 0 ]; then
-		subl .;
-	else
-		subl "$@";
-	fi;
-}
+# opens the given location (macOS only)
+if [[ "$OSTYPE" == darwin* ]]; then
+  function s() {
+    if [ $# -eq 0 ]; then
+      subl .;
+    else
+      subl "$@";
+    fi;
+  }
+fi
 
 # `o` with no arguments opens the current directory, otherwise opens the given
 # location
 function o() {
 	if [ $# -eq 0 ]; then
-		open .;
+		if [[ "$OSTYPE" == darwin* ]]; then
+			open .;
+		else
+			xdg-open .;
+		fi;
 	else
-		open "$@";
+		if [[ "$OSTYPE" == darwin* ]]; then
+			open "$@";
+		else
+			xdg-open "$@";
+		fi;
 	fi;
 }
 
