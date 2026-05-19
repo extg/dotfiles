@@ -22,8 +22,8 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 # Load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
-# Homebrew completions
-if type brew &>/dev/null; then
+# Homebrew completions (macOS only)
+if [[ "$OSTYPE" == darwin* ]] && type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
   autoload -Uz compinit
   compinit
@@ -74,22 +74,33 @@ export PATH="$HOME/bin:$PATH"
 
 # NVM configuration
 export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+if [[ "$OSTYPE" == darwin* ]]; then
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+else
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+fi
 
 # Ruby configuration
 export GEM_HOME="$HOME/.gem"
 export PATH="$HOME/.gem/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
-export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"
+if [[ "$OSTYPE" == darwin* ]]; then
+  export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"
+fi
 
-# Java configuration
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
+# Java configuration (macOS Homebrew path)
+if [[ "$OSTYPE" == darwin* ]]; then
+  export PATH="/usr/local/opt/openjdk/bin:$PATH"
+fi
 
-# Other path configurations
-export PATH="/Applications/IntelliJ IDEA 2023.3 CE EAP.app/Contents/MacOS:$PATH"
-export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+# Other macOS-specific path configurations
+if [[ "$OSTYPE" == darwin* ]]; then
+  export PATH="/Applications/IntelliJ IDEA 2023.3 CE EAP.app/Contents/MacOS:$PATH"
+  export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
+  export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+fi
 
 # Rust
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
@@ -99,9 +110,11 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
-# Yarn version manager
-export YVM_DIR=/usr/local/opt/yvm
-[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
+# Yarn version manager (macOS Homebrew path)
+if [[ "$OSTYPE" == darwin* ]]; then
+  export YVM_DIR=/usr/local/opt/yvm
+  [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
+fi
 
 # Poetry
 export PATH="$HOME/.local/bin:$PATH"
