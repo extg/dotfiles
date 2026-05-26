@@ -139,5 +139,5 @@ eval "$(starship init zsh)"
 # Initialize zoxide (must be at the end of .zshrc)
 if command -v zoxide &> /dev/null; then
   export _ZO_DOCTOR=0
-  eval "$(zoxide init zsh --cmd cd)"
+  eval "$(zoxide init zsh)"
 fi
