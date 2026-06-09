@@ -14,7 +14,7 @@
       ],
       "env": {
         "FIRECRAWL_API_URL": "http://localhost:3002",
-        "FIRECRAWL_API_KEY": "*"
+        "FIRECRAWL_API_KEY": "${env:FIRECRAWL_API_KEY}"
       }
     },
     "rube": {

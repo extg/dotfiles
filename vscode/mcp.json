@@ -14,7 +14,7 @@
       ],
       "env": {
         "FIRECRAWL_API_URL": "http://localhost:3002",
-        "FIRECRAWL_API_KEY": "*"
+        "FIRECRAWL_API_KEY": "${env:FIRECRAWL_API_KEY}"
       }
     },
     "figma": {
@@ -28,18 +28,8 @@
     "github": {
       "url": "https://api.githubcopilot.com/mcp/",
       "headers": {
-        "Authorization": "Bearer GITHUB_PAT_REDACTED",
+        "Authorization": "Bearer ${env:GITHUB_PAT}",
         "X-MCP-Toolsets": "repos,pull_requests,actions"
-      }
-    },
-    "tanstack": {
-      "command": "npx",
-      "args": [
-        "mcp-remote",
-        "https://tanstack.com/api/mcp"
-      ],
-      "env": {
-        "MCP_HEADERS": "Authorization: Bearer ${env:TRIGGER_API_KEY}"
       }
     },
     "rube": {
