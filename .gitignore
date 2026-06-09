@@ -27,3 +27,9 @@ jsconfig.json
 
 # Node
 node_modules/
+
+# Secrets — never commit. ~/.zshenv holds live API keys (Clickup, OpenAI, Neon, …)
+.zshenv
+home/.zshenv
+*.env
+.env

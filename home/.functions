@@ -100,11 +100,11 @@ function fingerprint() {
     ssh-keygen -lf "$1" -E md5
 }
 
+# auto-ls after every cd — disabled (was: ls -lrthG in a chpwd hook)
 # https://stackoverflow.com/questions/3964068/zsh-automatically-run-ls-after-every-cd
-function chpwd() {
-  # emulate -L zsh
-  ls -lrthG
-}
+# function chpwd() {
+#   ls -lrthG
+# }
 
 # gconf — manage per-user git identity (see ~/.gconf)
 source "$HOME/.gconf"

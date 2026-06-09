@@ -7,6 +7,10 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias tmuxa="tmux attach || tmux new"
 
+# Sesh documentation
+alias sesh-help="bat ~/Workspaces/dotfiles/docs/sesh-guide.md 2>/dev/null || cat ~/Workspaces/dotfiles/docs/sesh-guide.md"
+alias sesh-quick="bat ~/Workspaces/dotfiles/docs/sesh-cheatsheet.md 2>/dev/null || cat ~/Workspaces/dotfiles/docs/sesh-cheatsheet.md"
+
 # disable auto-setting of `packageManager` when corepack is enabled
 export COREPACK_ENABLE_AUTO_PIN=0
 # alias yarn="corepack yarn"
